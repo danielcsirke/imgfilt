@@ -22,6 +22,7 @@ target_include_directories(prog2hw
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
+# DELETE:
 # Optional: Add sandbox tools (e.g., test scripts, later test drivers)
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/sandbox")
     message(STATUS "Sandbox tools available in /sandbox")
