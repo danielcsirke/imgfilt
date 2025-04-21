@@ -17,10 +17,10 @@ public:
     // Setters
     // gets int, becasue if because of an error it would be outside of the range of uint8_t, the program would not crash
     // i will use std::clamp to make sure the value is between 0 and 255
-    void setR(int r);
-    void setG(int g);
-    void setB(int b);
-    void setA(int a);
-    void setRGBA(int r, int g, int b, int a = 255);
+    void setR(double r);
+    void setG(double g);
+    void setB(double b);
+    void setA(double a);
+    void setRGBA(double r, double g, double b, double a = 255);
 };
 
