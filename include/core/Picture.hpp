@@ -1,21 +1,15 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
 #include "Pixel.hpp"
 
-
-
-
 class Picture {
-    unsigned width;
-    unsigned height;
+    unsigned width, height;
     std::vector<Pixel> pixels;
 public:
-    Picture(unsigned width, unsigned height) : width(width), height(height), pixels(width * height) {}
-    unsigned getWidth() const { return width; } 
-    unsigned getHeight() const { return height; }
-    const Pixel& getPixel(unsigned x, unsigned y) const { return pixels[y * width + x]; }
-    void setPixel(unsigned x, unsigned y, const Pixel& pixel) { pixels[y * width + x] = pixel; }
+    Picture(unsigned width, unsigned height);
+    unsigned getWidth() const;
+    unsigned getHeight() const;
+    const Pixel& getPixel(unsigned x, unsigned y) const;
+    void setPixel(unsigned x, unsigned y, const Pixel& pixel);
 };
-
