@@ -22,3 +22,8 @@ DONE
 - Pixel.hpp
 - Picture.hpp
 - IFilter.hpp
+- ContrastBrightnessFilter.hpp
+
+NEXT:
+========
+- BlurFilter.hpp && the connected part in filters.cpp
