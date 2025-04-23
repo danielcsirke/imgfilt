@@ -15,12 +15,21 @@ class BlurFilter: public IConvolutionBasedFilter { // dont need intheritance fro
     int blurRadius;
     double blurFactor;
 public:
-    BlurFilter(int radius = 3, double factor = 1);
+    BlurFilter(double factor = 1, int radius = 3);
     ~BlurFilter() = default;
     void apply(Picture& pic); // obligated from IFilter
     const Kernel& kernel() const; // obligated from IConvolutionBasedFilter
 
     // i currently don't need getters/setters fuckYeah
 
+    // for future project:
+    // setKernel();
+    // getKernel();
+    
+    // this whole lineup will change!!!!!!!!
+    // i'll use a single ConvolutionFilter class, and 
+    // create a library, where the default kernels are
+    // and allow dynamic kernel applying (for later) 
+    // there no need for writing the same code again and again
 
 };
