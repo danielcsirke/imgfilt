@@ -3,9 +3,7 @@
 
 
 
-class BlurFilter: public IFilter {
 
-};
 
 class EdgeDetectionFilter: public IFilter {
 };

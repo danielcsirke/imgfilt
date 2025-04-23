@@ -1,0 +1,4 @@
+
+class BlurFilter: public IFilter {
+
+};
