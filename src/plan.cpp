@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 class EdgeDetectionFilter: public IFilter {
 };
 

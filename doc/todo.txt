@@ -27,5 +27,5 @@ DONE
 NEXT:
 ========
 - BlurFilter.hpp && the connected part in filters.cpp
-- create and write the Kernel.cpp (IMPORTANT)
-- 
+- create and write the Kernel.cpp (IMPORTANT) 
+- create and write IConvolutionBasedFilter.cpp (IMPORTANT) // i have to apply the convolution logic here
