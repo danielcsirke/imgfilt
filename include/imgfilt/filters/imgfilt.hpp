@@ -1,12 +1,11 @@
 #pragma once
 
 
-#include "BlurFilter.hpp"
-#include "ContrastFilter.hpp"
-#include "EdgeDetectionFilter.hpp"
+#include "ConvolutionBasedFilter.hpp"
+#include "ContrastBrightnessFilter.hpp"
 #include "GammaCorrectionFilter.hpp"
 #include "RGBCorrectionFilter.hpp"
 #include "MedianFilter.hpp"
 #include "IFilter.hpp"
-#include "FilterFactory.hpp"
-#include "FilterPipeline.hpp"
+#include "../pipeline/FilterFactory.hpp"
+#include "../pipeline/FilterPipeline.hpp"

@@ -1,10 +1,10 @@
-- implement check wether the rgba values in class Pixel are in range 0<n<255 (comes from bmp standard)
-- the getPixel method should return a const Pixel& object!!!
-- filter classs should have neccessary data for applying it
-- user interface 
-- put ImageFiltering classes into namespace
-- update the cmakelists.txt to the correct file structure
-- create user input handler (class?) funcions
+- implement check wether the rgba values in class Pixel are in range 0<n<255 (comes from bmp standard) DONE
+- the getPixel method should return a const Pixel& object!!! - DONE (PICTURE)
+- filter class should have neccessary data for applying it - NOT TASK, DIRECTION
+- user interface - DONE (IFILTER)
+- put ImageFiltering classes into namespace - IN PROGRESS
+- update the cmakelists.txt to the correct file structure - DONE
+- create user input handler (class?) funcions - IN PROGRESS, LATER
 
 
 
@@ -14,6 +14,9 @@ std::unique_ptr<ClassType> varname = \
     std::make_unique<ClassName>;
 
     shared: same
+
+if there are more cpp files, which declare things in the same namespace, that is not a problem, this work, everything will be in the namespace
+
 
 
 DONE

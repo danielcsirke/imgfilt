@@ -1,4 +1,9 @@
-// ContrastBrightnessFilter
+
+
+namespace imgfilt {
+
+// ------------ContrastBrightnessFilter------------------
+// --------------------START-----------------------------
 
 #include "../../include/imgfilt/filters/ContrastBrightnessFilter.hpp"
 #include "../../include/core/Pixel.hpp"
@@ -36,3 +41,8 @@ void ContrastBrightnessFilter::apply(Picture& pic) {
 }
 
 ContrastBrightnessFilter::~ContrastBrightnessFilter() = default;
+
+// ------------ContrastBrightnessFilter------------------
+// -----------------------END----------------------------
+
+}
