@@ -3,9 +3,11 @@
 #include <cstdint>
 
 class Pixel{
+private:
     uint8_t r, g, b, a;
 public:
     // Constructor
+    Pixel() = default; // needed for the vector
     Pixel(uint8_t r, uint8_t g, uint8_t b, uint8_t a = 255);
 
     // Getters

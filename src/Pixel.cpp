@@ -1,4 +1,4 @@
-#include "../../include/Pixel.hpp"
+#include "Pixel.hpp"
 #include <algorithm> // for std::clamp
 #include <cmath> // for std::round
 
@@ -14,6 +14,7 @@ uint8_t Pixel::getR() const { return r; }
 uint8_t Pixel::getG() const { return g; }
 uint8_t Pixel::getB() const { return b; }
 uint8_t Pixel::getA() const { return a; }
+
 void Pixel::setR(double r) {
     this->r = static_cast<uint8_t>(
         std::clamp(static_cast<int>(std::round(r)), 0, 255)

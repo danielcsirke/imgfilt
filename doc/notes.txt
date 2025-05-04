@@ -1,0 +1,2 @@
+during bmp file parsing, if the document is upsidedownwards, then the height and width shouldn't be a negative number! (it would cause error in picture.cpp)
+

@@ -10,8 +10,10 @@ class Picture {
     std::vector<Pixel> pixels;
 public:
     Picture(int32_t width, int32_t height);
+
     int32_t getWidth() const;
     int32_t getHeight() const;
+    
     const Pixel& getPixel(int32_t x, int32_t y) const;
     void setPixel(int32_t x, int32_t y, const Pixel& pixel);
 };
