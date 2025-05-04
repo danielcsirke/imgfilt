@@ -6,12 +6,13 @@ Required:
   -o, --output <file>      BMP to write (always 32‑bit)
 
 Filter options (can repeat in any order; each one is a filter stage):
-  --contrast <factor>      Multiply contrast by “factor” (e.g. 1.2)
-  --blur <radius>          Gaussian/box blur with given radius
-  --edge                   Simple edge‐detection (e.g. Sobel)
-  --offset <r> <g> <b>     Add per‑channel offsets (signed ints)
-  --gamma <value>          Gamma‑correct with given γ (e.g. 2.2)
-  --median <radius>        Median filter with square window of side (2*radius+1)
+  --contrast <factor>      Adjust contrast by scaling pixel deviation from mid-gray (1.0 = no change)
+  --brightness <value>     Add brightness offset to all channels equally (positive or negative integer)
+  --blur <radius>          Apply Gaussian blur with the given radius (floating-point or integer)
+  --median <radius>        Apply median filter with square window of size (2*radius + 1)
+  --edge                   Detect edges using a Sobel-like gradient magnitude
+  --offset <r> <g> <b>     Add per‑channel RGB offsets (signed integers)
+  --gamma <value>          Apply gamma correction with exponent γ (e.g. 2.2)
 
 Common flags:
   -h, --help               Show this message
@@ -29,3 +30,7 @@ Examples:
     --blur 2 \
     --gamma 2.2 \
     --median 1
+
+  # increase brightness and add a blue tint
+  imgfilter -i in.bmp -o out.bmp --brightness 20 --rgb 0.9 0.9 1.2
+

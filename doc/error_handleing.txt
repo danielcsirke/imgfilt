@@ -1,0 +1,60 @@
+class FileOpenException : public std::runtime_error {
+public:
+    FileOpenException(const std::string& filename)
+        : std::runtime_error("Cannot open file: " + filename) {}
+};
+
+throw FileOpenException("input.bmp");
+
+
+try {
+    openFile("input.bmp");
+} catch (const FileOpenException& e) {
+    std::cerr << "Error: " << e.what() << '\n';
+}
+
+
+throw MyException(...) -> raise an error - jumps to the nearest catch
+
+catch(...) -> handles the error
+
+exception::what() -> returns the error message as a string
+
+std::runtime_error -> base class to store error strings
+
+custom exception class -> specializes the error type (eg. file vs 0divison) 
+
+// Base exception for all image filter errors
+class ImgFilterException : public std::runtime_error {
+public:
+    using std::runtime_error::runtime_error;  // Inherit constructor
+};
+
+// File-related error
+class FileOpenException : public ImgFilterException {
+public:
+    explicit FileOpenException(const std::string& file)
+        : ImgFilterException("Could not open file: " + file) {}
+};
+
+// Wrong format (not 32-bit BMP)
+class InvalidFormatException : public ImgFilterException {
+public:
+    InvalidFormatException()
+        : ImgFilterException("Invalid image format (expected 32-bit BMP).") {}
+};
+
+// Invalid filter parameter (e.g. gamma <= 0)
+class InvalidParameterException : public std::logic_error {
+public:
+    explicit InvalidParameterException(const std::string& msg)
+        : std::logic_error("Invalid parameter: " + msg) {}
+};
+
+===================================================================
+class FileOpenException : public std::runtime_error {
+public:
+    explicit FileOpenException(const std::string& filename)
+        : std::runtime_error("Cannot open file: " + filename) {}
+};
+
