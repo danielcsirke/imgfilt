@@ -214,8 +214,8 @@ Javasolt képszűrők:
             Plan
 ============================
 
-1. main.cpp + CMake setup
-2. Pixel + Picture
+DONE 1. main.cpp + CMake setup
+DONE 2. Pixel + Picture
 3. BMPFileManager
 4. IFilter + GammaFilter
 5. FilterPipeline

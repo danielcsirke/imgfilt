@@ -37,12 +37,7 @@ class FilterFactory {
     // static functions
 };
 
-class IFileManager {
-public:
-    virtual bool loadImage (const std::string& filename, Picture& pic) = 0;
-    virtual bool saveImage (const std::string& filename, const Picture& pic) = 0;
-    virtual ~IFileManager();
-};
+
 
 class BMPFileManager: public IFileManager {
 public:
