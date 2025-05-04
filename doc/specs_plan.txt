@@ -1,23 +1,27 @@
+Image Filter Program – Implementation Plan and Architecture
+============================================================
+
 High-Level Architecture Overview
---------------------------------
+-------------------------------
 Core Components:
 
-- ArgumentParser: Parses and validates command-line arguments into structured filter specs
+- CommandLineParser: Parses and validates command-line arguments into structured filter specs
 - FilterFactory: Creates filter objects (`IFilter`) from parsed specifications
 - FilterPipeline: Stores filters and applies them in sequence
 - IFileManager + BMPFileManager: Loads/saves BMP images to/from a `Picture` class
 - IFilter (interface): Base class for all filters
 - Picture + Pixel: In-memory representation of an image
+- ConvolutionFilter: Shared logic for all convolution-based filters (blur, edge, etc.)
 - Exception classes: Handle and report runtime and logic errors cleanly
 
 Detailed Class Specifications
 -----------------------------
 
-ArgumentParser
---------------
-class ArgumentParser {
+CommandLineParser
+-----------------
+class CommandLineParser {
 public:
-    ArgumentParser(int argc, char* argv[]);
+    CommandLineParser(int argc, char* argv[]);
     std::string getInputFilename() const;
     std::string getOutputFilename() const;
     std::vector<FilterSpec> getFilterSpecs() const;
@@ -72,7 +76,7 @@ Picture and Pixel
 -----------------
 class Pixel {
 public:
-    uint8_t r, g, b, a;  // a is ignored for processing
+    uint8_t r, g, b, a;  // alpha ignored for processing
 };
 
 class Picture {
@@ -93,29 +97,35 @@ public:
 };
 
 // Examples:
-class BlurFilter : public IFilter { ... };
-class ContrastFilter : public IFilter { ... };
-class GammaFilter : public IFilter { ... };
+class BlurFilter : public ConvolutionFilter { ... };
+class EdgeDetectFilter : public ConvolutionFilter { ... };
+class GammaCorrectionFilter : public IFilter { ... };
+class ContrastBrightnessFilter : public IFilter { ... };
 class MedianFilter : public IFilter { ... };
-class EdgeDetectFilter : public IFilter { ... };
-class RGBOffsetFilter : public IFilter { ... };
+class RGBCorrectionFilter : public IFilter { ... };
+
+ConvolutionFilter
+-----------------
+- Abstract base for filters that use a kernel
+- Shared logic for convolution (looping over neighbors, applying kernel)
+- Used by BlurFilter, EdgeDetectFilter, etc.
 
 Exception Handling
 ------------------
 Custom Exception Classes:
 
-FileOpenException (std::runtime_error) — file can't be opened or written
-InvalidFormatException (std::runtime_error) — BMP format is not 32-bit or is compressed
-InvalidParameterException (std::logic_error) — user gave an invalid CLI argument or value
+- FileOpenException (std::runtime_error) – file cannot be opened or written
+- InvalidFormatException (std::runtime_error) – file is not a 32-bit BMP
+- InvalidParameterException (std::logic_error) – user gave invalid argument or filter parameter
 
-Each stores a message and uses the base class what().
+Each stores a message and overrides what() from std::exception.
 
 Command-Line Interface
 ----------------------
 Usage:
   imgfilter -i <input.bmp> -o <output.bmp> [filters]
 
-Options:
+Available Filters:
   --contrast <factor>
   --brightness <value>
   --blur <radius>
@@ -130,89 +140,68 @@ Example:
 
 Error Handling Rules
 --------------------
-- Do not catch exceptions inside filters or file managers — throw them and catch in main().
-- Recover gracefully where possible (e.g., ask for filename again).
-- Display clear messages to stderr.
-
-Testing
--------
-Create a main_test.cpp or --test flag that:
-- Loads known BMP test images
-- Applies all filters
-- Validates output visually or via checksum
+- User is notified with meaningful messages.
+- In case of error, the program allows retrying by asking for corrected inputs.
 
 
-
-=======================
-=======================
-
-imgfilter/
-├── src/                  # C++ source files
+Folder Structure
+----------------
+prog2hw/
+├── src/
 │   ├── main.cpp
-│   ├── main_test.cpp
-│   ├── ArgumentParser.cpp
+│   ├── CommandLineParser.cpp
 │   ├── FilterFactory.cpp
 │   ├── FilterPipeline.cpp
 │   ├── BMPFileManager.cpp
 │   ├── Picture.cpp
-│   └── filters/          # All IFilter implementations
+│   └── filters/
 │       ├── BlurFilter.cpp
-│       ├── ContrastFilter.cpp
-│       ├── GammaFilter.cpp
+│       ├── ContrastBrightnessFilter.cpp
+│       ├── GammaCorrectionFilter.cpp
 │       ├── MedianFilter.cpp
-│       ├── EdgeDetectFilter.cpp
-│       ├── RGBOffsetFilter.cpp
-│       └── BrightnessFilter.cpp
+│       ├── RGBCorrectionFilter.cpp
+│       └── ConvolutionFilter.cpp
 │
-├── include/              # Public headers
-│   ├── ArgumentParser.hpp
+├── include/
+│   ├── CommandLineParser.hpp
 │   ├── FilterFactory.hpp
 │   ├── FilterPipeline.hpp
 │   ├── IFileManager.hpp
 │   ├── BMPFileManager.hpp
 │   ├── Picture.hpp
 │   ├── Pixel.hpp
-│   ├── FilterSpec.hpp
+│   ├── FilterSpec.hpp 				# Ez egy kis segédosztály, amit a CommandLineParser hoz létre azért, hogy egy-egy szűrőt és annak paramétereit leírja.
 │   ├── IFilter.hpp
-│   ├── Exceptions.hpp    # All custom exceptions
+│   ├── Exceptions.hpp
 │   ├── Help.hpp
-│   └── filters/          # Filter headers
+│   └── filters/
 │       ├── BlurFilter.hpp
-│       ├── ContrastFilter.hpp
-│       ├── GammaFilter.hpp
+│       ├── GammaCorrectionFilter.hpp
 │       ├── MedianFilter.hpp
-│       ├── EdgeDetectFilter.hpp
-│       ├── RGBOffsetFilter.hpp
-│       └── BrightnessFilter.hpp
+│       ├── RGBCorrectionFilter.hpp
+│       ├── ConvolutionFilter.hpp
+│       └── ContrastBrightnessFilter.hpp
 │
-├── tests/                # Test images, test configs
-│   ├── input.bmp
-│   ├── expected_output.bmp
-│   └── test_config.txt
-│
-├── assets/               # Optional: ASCII art, easter egg content
-│   └── easteregg.txt
-│
-├── CMakeLists.txt        # or Makefile for building the project
-├── README.md             # Project overview and usage
-├── imgfilter_spec.txt    # Your full project specification
-└── LICENSE               # If needed
+├── doc/
+│  
+├── CMakeLists.txt
+├── README.md
+└── LICENSE
 
-
-==============================
-==============================
-
+Functional Specification (per assignment)
+-----------------------------------------
 Készítsen C++ programot, amely képes 32bites Windows Bitmap 
 formátumú képfájl betöltésére. Minden képpontot 32 bites mező 
 kódol (unsigned int), tartalmazza a három színcsatorna intenzitását 
 és az átlátszóságot bájtonként (4x8bit). Az átlátszósággal nem kell 
 foglalkozni, minden esetben tekinthető 255 értékűnek. 
 Implementáljon több szűrő algoritmust, mely a bemeneti képen dolgozik, 
-az eredményt újabb képfájlba menti. Opcionálisan több szűrőt összekötését 
+az eredményt újabb képfájlba menti. Opcionálisan több szűrő összekötését 
 is megvalósíthatja, ebben az esetben csak az utolsó szűrő eredménye íródik 
 ki fájlba. Akár a betöltés és a mentés is tekinthető egy-egy szűrőnek.
 Használjon objektumorientált reprezentációt és öröklést.
-Készítsen tesztalkalmazást a funkciók kipróbáláshoz!
+Készítsen tesztalkalmazást a funkciók kipróbálásához!
+
 Javasolt képszűrők:
     • Kontraszt állítás
     • Életlenítés (blur, konvolúcióval)
