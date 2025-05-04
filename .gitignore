@@ -66,3 +66,6 @@ compile_commands.json
 *.exe
 *.out
 *.app
+
+# Ideiglenes docx file-ok 
+*.docx#

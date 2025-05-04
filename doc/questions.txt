@@ -1,4 +1,0 @@
-- can i generate comments with ai? 
-- can i generate documentation with ai? 
-- should everywhere be getters/setters even if the code won't use it? 
-- 
