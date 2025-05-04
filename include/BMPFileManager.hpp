@@ -1,9 +1,9 @@
 #pragma once
+
 #include <string>
-#include <stdexcept>
 #include "IFileManager.hpp"
 #include "Picture.hpp"
-#include "Exceptions.hpp"
+
 
 
 /*
