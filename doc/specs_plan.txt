@@ -1,0 +1,222 @@
+High-Level Architecture Overview
+--------------------------------
+Core Components:
+
+- ArgumentParser: Parses and validates command-line arguments into structured filter specs
+- FilterFactory: Creates filter objects (`IFilter`) from parsed specifications
+- FilterPipeline: Stores filters and applies them in sequence
+- IFileManager + BMPFileManager: Loads/saves BMP images to/from a `Picture` class
+- IFilter (interface): Base class for all filters
+- Picture + Pixel: In-memory representation of an image
+- Exception classes: Handle and report runtime and logic errors cleanly
+
+Detailed Class Specifications
+-----------------------------
+
+ArgumentParser
+--------------
+class ArgumentParser {
+public:
+    ArgumentParser(int argc, char* argv[]);
+    std::string getInputFilename() const;
+    std::string getOutputFilename() const;
+    std::vector<FilterSpec> getFilterSpecs() const;
+    bool isHelpRequested() const;
+};
+
+- Validates presence of -i and -o
+- Parses filter options in order
+- On error, throws InvalidParameterException
+
+FilterFactory
+-------------
+class FilterFactory {
+public:
+    static std::unique_ptr<IFilter> create(const FilterSpec& spec);
+};
+
+- Uses spec.name to choose filter
+- Parses spec.parameters for arguments
+- Throws InvalidParameterException if parsing fails
+
+FilterPipeline
+--------------
+class FilterPipeline {
+public:
+    void addFilter(std::unique_ptr<IFilter> filter);
+    void apply(Picture& image) const;
+private:
+    std::vector<std::unique_ptr<IFilter>> filters;
+};
+
+- Applies all filters in order to the image
+
+IFileManager / BMPFileManager
+-----------------------------
+class IFileManager {
+public:
+    virtual Picture load(const std::string& filename) = 0;
+    virtual void save(const Picture& picture, const std::string& filename) = 0;
+};
+
+class BMPFileManager : public IFileManager {
+public:
+    Picture load(const std::string& filename) override;
+    void save(const Picture& picture, const std::string& filename) override;
+};
+
+- Validates BMP format: 32-bit, uncompressed
+- Throws FileOpenException or InvalidFormatException if invalid
+
+Picture and Pixel
+-----------------
+class Pixel {
+public:
+    uint8_t r, g, b, a;  // a is ignored for processing
+};
+
+class Picture {
+public:
+    int width, height;
+    std::vector<Pixel> data;
+
+    Pixel& at(int x, int y);
+    const Pixel& at(int x, int y) const;
+};
+
+IFilter and Filter Subclasses
+-----------------------------
+class IFilter {
+public:
+    virtual void apply(Picture& img) const = 0;
+    virtual ~IFilter() = default;
+};
+
+// Examples:
+class BlurFilter : public IFilter { ... };
+class ContrastFilter : public IFilter { ... };
+class GammaFilter : public IFilter { ... };
+class MedianFilter : public IFilter { ... };
+class EdgeDetectFilter : public IFilter { ... };
+class RGBOffsetFilter : public IFilter { ... };
+
+Exception Handling
+------------------
+Custom Exception Classes:
+
+FileOpenException (std::runtime_error) — file can't be opened or written
+InvalidFormatException (std::runtime_error) — BMP format is not 32-bit or is compressed
+InvalidParameterException (std::logic_error) — user gave an invalid CLI argument or value
+
+Each stores a message and uses the base class what().
+
+Command-Line Interface
+----------------------
+Usage:
+  imgfilter -i <input.bmp> -o <output.bmp> [filters]
+
+Options:
+  --contrast <factor>
+  --brightness <value>
+  --blur <radius>
+  --median <radius>
+  --edge
+  --offset <r> <g> <b>
+  --gamma <value>
+  -h, --help
+
+Example:
+  imgfilter -i photo.bmp -o out.bmp --contrast 1.5 --blur 2 --gamma 2.2
+
+Error Handling Rules
+--------------------
+- Do not catch exceptions inside filters or file managers — throw them and catch in main().
+- Recover gracefully where possible (e.g., ask for filename again).
+- Display clear messages to stderr.
+
+Testing
+-------
+Create a main_test.cpp or --test flag that:
+- Loads known BMP test images
+- Applies all filters
+- Validates output visually or via checksum
+
+
+
+=======================
+=======================
+
+imgfilter/
+├── src/                  # C++ source files
+│   ├── main.cpp
+│   ├── main_test.cpp
+│   ├── ArgumentParser.cpp
+│   ├── FilterFactory.cpp
+│   ├── FilterPipeline.cpp
+│   ├── BMPFileManager.cpp
+│   ├── Picture.cpp
+│   └── filters/          # All IFilter implementations
+│       ├── BlurFilter.cpp
+│       ├── ContrastFilter.cpp
+│       ├── GammaFilter.cpp
+│       ├── MedianFilter.cpp
+│       ├── EdgeDetectFilter.cpp
+│       ├── RGBOffsetFilter.cpp
+│       └── BrightnessFilter.cpp
+│
+├── include/              # Public headers
+│   ├── ArgumentParser.hpp
+│   ├── FilterFactory.hpp
+│   ├── FilterPipeline.hpp
+│   ├── IFileManager.hpp
+│   ├── BMPFileManager.hpp
+│   ├── Picture.hpp
+│   ├── Pixel.hpp
+│   ├── FilterSpec.hpp
+│   ├── IFilter.hpp
+│   ├── Exceptions.hpp    # All custom exceptions
+│   ├── Help.hpp
+│   └── filters/          # Filter headers
+│       ├── BlurFilter.hpp
+│       ├── ContrastFilter.hpp
+│       ├── GammaFilter.hpp
+│       ├── MedianFilter.hpp
+│       ├── EdgeDetectFilter.hpp
+│       ├── RGBOffsetFilter.hpp
+│       └── BrightnessFilter.hpp
+│
+├── tests/                # Test images, test configs
+│   ├── input.bmp
+│   ├── expected_output.bmp
+│   └── test_config.txt
+│
+├── assets/               # Optional: ASCII art, easter egg content
+│   └── easteregg.txt
+│
+├── CMakeLists.txt        # or Makefile for building the project
+├── README.md             # Project overview and usage
+├── imgfilter_spec.txt    # Your full project specification
+└── LICENSE               # If needed
+
+
+==============================
+==============================
+
+Készítsen C++ programot, amely képes 32bites Windows Bitmap 
+formátumú képfájl betöltésére. Minden képpontot 32 bites mező 
+kódol (unsigned int), tartalmazza a három színcsatorna intenzitását 
+és az átlátszóságot bájtonként (4x8bit). Az átlátszósággal nem kell 
+foglalkozni, minden esetben tekinthető 255 értékűnek. 
+Implementáljon több szűrő algoritmust, mely a bemeneti képen dolgozik, 
+az eredményt újabb képfájlba menti. Opcionálisan több szűrőt összekötését 
+is megvalósíthatja, ebben az esetben csak az utolsó szűrő eredménye íródik 
+ki fájlba. Akár a betöltés és a mentés is tekinthető egy-egy szűrőnek.
+Használjon objektumorientált reprezentációt és öröklést.
+Készítsen tesztalkalmazást a funkciók kipróbáláshoz!
+Javasolt képszűrők:
+    • Kontraszt állítás
+    • Életlenítés (blur, konvolúcióval)
+    • Éldetektálás
+    • Szín módosítás (csatornánként megadható +- ofszetek)
+    • Gamma korrekció
+    • Medián szűrő

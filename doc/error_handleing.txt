@@ -1,60 +1,71 @@
-class FileOpenException : public std::runtime_error {
+STANDARD ERROR - CAN DO ANYTHING WITH IT - THE NEXT TWO OPTION IS BETTER
+
+#include <exception>
+#include <string>
+#include <iostream>
+
+class Error : public std::exception {
+private:
+    std::string message;
+
 public:
-    FileOpenException(const std::string& filename)
-        : std::runtime_error("Cannot open file: " + filename) {}
+    explicit Error(const std::string& msg) : message(msg) {}
+
+    const char* what() const noexcept override {
+        return message.c_str();
+    }
 };
 
-throw FileOpenException("input.bmp");
+int main() {
+    try {
+        throw Error("some message");
+    } catch (const std::exception& e) {
+        std::cerr << "💥 Error: " << e.what() << std::endl;
+    }
 
-
-try {
-    openFile("input.bmp");
-} catch (const FileOpenException& e) {
-    std::cerr << "Error: " << e.what() << '\n';
+    return 0;
 }
 
+STD RUNTIME ERROR:
 
-throw MyException(...) -> raise an error - jumps to the nearest catch
+#include <stdexcept>
+#include <iostream>
+#include <string>
 
-catch(...) -> handles the error
-
-exception::what() -> returns the error message as a string
-
-std::runtime_error -> base class to store error strings
-
-custom exception class -> specializes the error type (eg. file vs 0divison) 
-
-// Base exception for all image filter errors
-class ImgFilterException : public std::runtime_error {
+class Error : public std::runtime_error {
 public:
-    using std::runtime_error::runtime_error;  // Inherit constructor
+    explicit Error(const std::string& msg)
+        : std::runtime_error(msg) {}
 };
 
-// File-related error
-class FileOpenException : public ImgFilterException {
+int main() {
+    try {
+        throw Error("some message");
+    } catch (const std::exception& e) {
+        std::cerr << "💥 Error: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
+
+STD LOGIC ERROR:
+
+#include <stdexcept>
+#include <iostream>
+#include <string>
+
+class LogicError : public std::logic_error {
 public:
-    explicit FileOpenException(const std::string& file)
-        : ImgFilterException("Could not open file: " + file) {}
+    explicit LogicError(const std::string& msg)
+        : std::logic_error(msg) {}
 };
 
-// Wrong format (not 32-bit BMP)
-class InvalidFormatException : public ImgFilterException {
-public:
-    InvalidFormatException()
-        : ImgFilterException("Invalid image format (expected 32-bit BMP).") {}
-};
+int main() {
+    try {
+        throw LogicError("Invalid filter parameter");
+    } catch (const std::exception& e) {
+        std::cerr << "💥 Logic Error: " << e.what() << std::endl;
+    }
 
-// Invalid filter parameter (e.g. gamma <= 0)
-class InvalidParameterException : public std::logic_error {
-public:
-    explicit InvalidParameterException(const std::string& msg)
-        : std::logic_error("Invalid parameter: " + msg) {}
-};
-
-===================================================================
-class FileOpenException : public std::runtime_error {
-public:
-    explicit FileOpenException(const std::string& filename)
-        : std::runtime_error("Cannot open file: " + filename) {}
-};
-
+    return 0;
+}
