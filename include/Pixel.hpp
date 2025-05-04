@@ -21,6 +21,7 @@ public:
     void setG(double g);
     void setB(double b);
     void setA(double a);
+    void setGray(double gray); // sets all colors to the same value
     void setRGBA(double r, double g, double b, double a = 255);
 };
 

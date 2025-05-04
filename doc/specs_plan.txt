@@ -209,3 +209,17 @@ Javasolt képszűrők:
     • Szín módosítás (csatornánként megadható +- ofszetek)
     • Gamma korrekció
     • Medián szűrő
+
+============================
+            Plan
+============================
+
+1. main.cpp + CMake setup
+2. Pixel + Picture
+3. BMPFileManager
+4. IFilter + GammaFilter
+5. FilterPipeline
+6. FilterSpec + FilterFactory
+7. CommandLineParser
+8. Blur / Edge / Median / etc. filters
+9. Help, exceptions, clean-up

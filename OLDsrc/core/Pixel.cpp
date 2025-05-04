@@ -1,4 +1,4 @@
-#include "../../include/core/Pixel.hpp"
+#include "../../include/Pixel.hpp"
 #include <algorithm> // for std::clamp
 #include <cmath> // for std::round
 
@@ -38,19 +38,17 @@ void Pixel::setA(double a) {
     );
 }
 
+void Pixel::setGray(double gray) {
+    setR(gray);
+    setG(gray);
+    setB(gray);
+}
+
 void Pixel::setRGBA(double r, double g, double b, double a) {
-    this->r = static_cast<uint8_t>(
-        std::clamp(static_cast<int>(std::round(r)), 0, 255)
-    );
-    this->g = static_cast<uint8_t>(
-        std::clamp(static_cast<int>(std::round(g)), 0, 255)
-    );
-    this->b = static_cast<uint8_t>(
-        std::clamp(static_cast<int>(std::round(b)), 0, 255)
-    );
-    this->a = static_cast<uint8_t>(
-        std::clamp(static_cast<int>(std::round(a)), 0, 255)
-    );
+    setR(r);
+    setG(g);
+    setB(b);
+    setA(a);
 }
 
 
