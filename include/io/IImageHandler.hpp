@@ -1,5 +1,5 @@
 #pragma once
-#include "Image.hpp"
+#include "types/Image.hpp"
 #include <string>
 
 class IImageHandler {

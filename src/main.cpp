@@ -1,5 +1,5 @@
 #include <iostream>
-#include "BatchProcessor.hpp"
+#include "io/BatchProcessor.hpp"
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {

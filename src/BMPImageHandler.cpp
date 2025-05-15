@@ -1,10 +1,10 @@
 #include <cstdint>
 #include <algorithm>
-#include "Pixel.hpp"
+#include "types/Pixel.hpp"
 
 
 
-#include "BMPImageHandler.hpp"
+#include "io/BMPImageHandler.hpp"
 
 
 

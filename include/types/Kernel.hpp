@@ -3,12 +3,6 @@
 #include <vector>
 
 
-/*
-* I won't bitch around with even sized kernels, fuck even sized ones. 
-* there will be a requirement, that just odd sized kernels can be used.
-* because i have to fucking error handle, i have to check runtime, 
-* if some stupid bitch would want to create an odd sized kernel...!! 
-*/
 
 using KernelMatrix = std::vector<std::vector<double>>;
 
@@ -24,12 +18,10 @@ public:
     void set(const KernelMatrix& values);
     const KernelMatrix& getValues() const; 
 
-    int width() const;
-    int height() const;
     int centerX() const;
     int centerY() const;
-    int rows() const;  // = height() MAYBE REMOVE IN THE FUTURE
-    int cols() const;  // = width() MAYBE REMOVE IN THE FUTURE
+    int rows() const;
+    int cols() const;
 
 
     double sum() const;

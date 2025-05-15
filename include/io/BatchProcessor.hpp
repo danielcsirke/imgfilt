@@ -6,8 +6,10 @@
 #include <sstream>
 
 #include "IImageHandler.hpp"
-#include "FilterPipeline.hpp"
-#include "Image.hpp"
+#include "filt_op/FilterPipeline.hpp"
+#include "types/Image.hpp"
+#include "filt_op/FilterFactory.hpp"
+#include "CommandType.hpp"
 
 
 
@@ -16,8 +18,11 @@
 class BatchProcessor{
     Image img;
     FilterPipeline pipeline;
+    FilterFactory factory;
+    FilterSpec spec;
 
     std::unique_ptr<IImageHandler> createHandlerFromExtension(const std::string& filename);
+    CommandType getCommandType(const std::string& cmd);
 public:
     BatchProcessor() = default;
     ~BatchProcessor() = default;

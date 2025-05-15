@@ -3,8 +3,8 @@
 #include <vector>
 #include <memory>
 
-#include "Image.hpp"
-#include "IFilter.hpp"
+#include "types/Image.hpp"
+#include "filt_op/IFilter.hpp"
 
 class FilterPipeline {
     std::vector<std::unique_ptr<IFilter>> filters;

@@ -1,6 +1,6 @@
 #pragma once 
 
-#include "Image.hpp"
+#include "types/Image.hpp"
 
 class IFilter {
 public:
