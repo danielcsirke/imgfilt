@@ -1,0 +1,112 @@
+process("input.txt")
+open(input.txt);
+// the class what process is a part of should have a 
+// class ... {Picture pic; FilterPipeline pip;}
+
+{
+    while (getline(file, line)){
+        if (line starts with INPUT){
+            pic.load(...);
+            pip.clear()
+        }
+        if (line starts with FILTER){
+            pip.add(...)
+        }
+        if (line starts with OUTPUT){
+            pip.apply(pic);
+            pic.save(...);
+        }
+    }
+}
+//=============================================================================
+class BatchProcessor {
+    Image pic;
+    FilterPipeline pip;
+    std::unique_ptr<IImageHandler> handler;
+
+public:
+    // Constructor accepts the handler (e.g., BMPHandler, PNGHandler)
+    BatchProcessor(std::unique_ptr<IImageHandler> h)
+        : handler(std::move(h)) {}
+
+    void process(const std::string& filename) {
+        std::ifstream file(filename);
+        if (!file.is_open()) {
+            throw std::runtime_error("Could not open command file: " + filename);
+        }
+
+        std::string line;
+        while (std::getline(file, line)) {
+            std::istringstream iss(line);
+            std::string command;
+            iss >> command;
+
+            if (command == "INPUT") {
+                std::string inputFile;
+                iss >> inputFile;
+                if (inputFile.empty()) throw std::runtime_error("Missing input file name.");
+                pic = handler->load(inputFile);
+                pip.clear();
+
+            } else if (command == "BRIGHTNESS") {
+                int value;
+                iss >> value;
+                pip.add(std::make_unique<BrightnessFilter>(value));
+
+            } else if (command == "CONTRAST") {
+                int value;
+                iss >> value;
+                pip.add(std::make_unique<ContrastFilter>(value));
+
+            } else if (command == "GAMMA") {
+                double gamma;
+                iss >> gamma;
+                pip.add(std::make_unique<GammaFilter>(gamma));
+
+            } else if (command == "OUTPUT") {
+                std::string outputFile;
+                iss >> outputFile;
+                if (outputFile.empty()) throw std::runtime_error("Missing output file name.");
+                pip.apply(pic);
+                handler->save(pic, outputFile);
+
+            } else if (!command.empty()) {
+                throw std::runtime_error("Unknown command: " + command);
+            }
+        }
+    }
+};
+
+
+//==============================================================================
+IImageHandler
+    - BMPHandler    
+        - load (filename) 
+        - save (image, filename)
+
+//==============================================================================
+class IImageHandler {
+public:
+    virtual Image load(const std::string& filename) = 0;
+    virtual void save(const Image& image, const std::string& filename) = 0;
+    virtual ~IImageHandler() = default;
+};
+
+//==============================================================================
+class BMPHandler : public IImageHandler {
+public:
+    Image load(const std::string& filename) override {
+        // load BMP logic
+    }
+
+    void save(const Image& image, const std::string& filename) override {
+        // save BMP logic
+    }
+};
+
+//==============================================================================
+// USAGE:
+BMPHandler bmp;
+Image img = bmp.load("input.bmp");
+bmp.save(img, "output.bmp");
+
