@@ -25,9 +25,7 @@ class BatchProcessor {
     std::unique_ptr<IImageHandler> handler;
 
 public:
-    // Constructor accepts the handler (e.g., BMPHandler, PNGHandler)
-    BatchProcessor(std::unique_ptr<IImageHandler> h)
-        : handler(std::move(h)) {}
+
 
     void process(const std::string& filename) {
         std::ifstream file(filename);
