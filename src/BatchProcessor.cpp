@@ -71,8 +71,10 @@ void BatchProcessor::handleCommand(const std::string& command, std::istringstrea
             args >> filename;
             auto handler = createHandlerFromExtension(filename);
             factory.buildFilter(pipeline, spec);
-            pipeline.apply(img);
-            handler->save(filename, img);
+            if (!img) 
+                throw std::runtime_error("No image loaded. Use INPUT before OUTPUT.");
+            pipeline.apply(*img);
+            handler->save(filename, *img);
             break;
         }
 

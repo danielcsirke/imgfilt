@@ -1,6 +1,7 @@
 #pragma once
 #include "types/Image.hpp"
 #include <string>
+#include <memory>
 
 class IImageHandler {
 public:

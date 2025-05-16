@@ -1,6 +1,7 @@
 #pragma once 
 
 #include <string>
+#include <memory>
 
 #include "IImageHandler.hpp"
 #include "types/Image.hpp"

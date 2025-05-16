@@ -15,7 +15,7 @@
 
 
 class BatchProcessor{
-    Image img;
+    std::unique_ptr<Image> img;
     FilterPipeline pipeline;
     FilterFactory factory;
     FilterSpec spec;
