@@ -1,29 +1,27 @@
-#pragma once
-
 #include "types/Kernel.hpp"
 #include <cmath>
 #include <stdexcept>
 #include <vector>
 
-namespace kernelLibrary{
+namespace kernelGenerators{
 
 Kernel createBoxBlurKernel(int size) {
-    if (size % 2 == 0) {
-        throw std::invalid_argument("Box blur kernel size must be odd.");
+    if (size <= 0 || size % 2 == 0) {
+        throw std::invalid_argument("Box blur kernel size must be positive and odd.");
     }
 
     double value = 1.0 / (size * size);
     KernelMatrix matrix(size, std::vector<double>(size, value));
 
     Kernel kernel(matrix);
-    kernel.normalize(); // ✅ ensures exact normalization
+    kernel.normalize(); 
     return kernel;
 }
 
 
 Kernel createGaussianBlurKernel(int size, double sigma) {
-    if (size % 2 == 0) {
-        throw std::invalid_argument("Gaussian blur kernel size must be odd.");
+    if (size <= 0 || size % 2 == 0) {
+        throw std::invalid_argument("Gaussian blur kernel size must be positive and odd.");
     }
 
     KernelMatrix matrix(size, std::vector<double>(size));
@@ -42,14 +40,10 @@ Kernel createGaussianBlurKernel(int size, double sigma) {
         }
     }
 
-    // normalize the kernel
-    for (int y = 0; y < size; ++y) {
-        for (int x = 0; x < size; ++x) {
-            matrix[y][x] /= sum;
-        }
-    }
+    Kernel kernel(matrix);
+    kernel.normalize(); 
+    return kernel;
 
-    return Kernel(matrix);
 }
 
 }

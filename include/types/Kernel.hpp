@@ -2,9 +2,7 @@
 
 #include <vector>
 
-
-
-using KernelMatrix = std::vector<std::vector<double>>;
+using KernelMatrix = std::vector<std::vector<double>>; 
 
 class Kernel {
     KernelMatrix kernelValues; 
@@ -22,7 +20,6 @@ public:
     int centerY() const;
     int rows() const;
     int cols() const;
-
 
     double sum() const;
     void normalize(double epsilon = 1e-6);

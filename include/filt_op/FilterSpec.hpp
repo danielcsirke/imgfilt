@@ -2,6 +2,9 @@
 
 class FilterSpec {
 public:
+    FilterSpec() {
+        clear();
+    }
     bool hasContrast = false;
     double contrastFactor = 0;
 

@@ -5,9 +5,10 @@
 
 
 class ContrastBrightnessFilter : public IFilter {
-    double contrastFactor;
-    double brightnessFactor;
+    double contrastFactor = 1.0;
+    double brightnessFactor = 0.0;
 public:
-   ContrastBrightnessFilter(double contrastFactor, double brightnessFactor = 0) : contrastFactor(contrastFactor), brightnessFactor(brightnessFactor) {};
+   ContrastBrightnessFilter(double contrastFactor = 1.0, double brightnessFactor = 0.0) : contrastFactor(contrastFactor), brightnessFactor(brightnessFactor) {}
    void apply(Image& img) const override;
+   ~ContrastBrightnessFilter() = default;
 };

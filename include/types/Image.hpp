@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
 
 #include "Pixel.hpp"
@@ -16,10 +15,14 @@ public:
     }
 
     Pixel& at(int x, int y) {
+        if (x < 0 || x >= width || y < 0 || y >= height)
+            throw std::out_of_range("Pixel coordinates out of range");
         return pixels[y][x];
     }
 
     const Pixel& at(int x, int y) const {
+        if (x < 0 || x >= width || y < 0 || y >= height)
+            throw std::out_of_range("Pixel coordinates out of range");
         return pixels[y][x];
     }
     

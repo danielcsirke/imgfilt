@@ -1,6 +1,8 @@
 #pragma once 
-#include "IImageHandler.hpp"
+
 #include <string>
+
+#include "IImageHandler.hpp"
 #include "types/Image.hpp"
 
 
@@ -10,6 +12,6 @@ public:
     BMPImageHandler() = default;
     ~BMPImageHandler() override = default;
 
-    Image load(const std::string& filename) const override;
+    std::unique_ptr<Image> load(const std::string& filename) const override;
     void save(const std::string& filename, const Image& image) const override;
 };
