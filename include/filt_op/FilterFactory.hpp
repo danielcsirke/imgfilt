@@ -1,7 +1,7 @@
 #pragma once
 
 #include "FilterPipeline.hpp"
-#include "FilterSpec.hpp"
+#include "types/FilterSpec.hpp"
 
 class FilterFactory {
 public:

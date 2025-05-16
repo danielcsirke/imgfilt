@@ -8,7 +8,7 @@
 #include "filt_op/FilterPipeline.hpp"
 #include "types/Image.hpp"
 #include "filt_op/FilterFactory.hpp"
-#include "CommandType.hpp"
+#include "types/CommandType.hpp"
 
 
 
