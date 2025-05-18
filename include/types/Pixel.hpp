@@ -11,6 +11,12 @@ public:
     double getG() const { return g; }
     double getB() const { return b; }
     double getA() const { return a; }
+    double setRGBA(double r, double g, double b, double a) {
+        this->r = r;
+        this->g = g;
+        this->b = b;
+        this->a = a;
+    }
 
     void setR(double value) { r = value; }
     void setG(double value) { g = value; }
