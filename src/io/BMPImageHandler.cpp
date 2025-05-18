@@ -22,3 +22,14 @@ void BMPImageHandler::save(const std::string& filename, const Image& image) cons
     
        
 }
+
+BMPImageHandler::~BMPImageHandler() = default;
+
+std::unique_ptr<Image> BMPImageHandler::load(const std::string& filename) const {
+    // TODO: Implement BMP loading logic
+
+    // For now, return a nullptr to indicate that loading is not implemented
+    return nullptr;
+    
+    
+}
