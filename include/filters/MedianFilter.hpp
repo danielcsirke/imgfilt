@@ -4,9 +4,12 @@
 #include "types/Image.hpp"
 
 class MedianFilter : public IFilter {
-    uint kernelSize;
+    uint kernelSize; // the size of the kernel is kernelSize x kernelSize, it alway has to be odd!
 
 public:
-    MedianFilter(unsigned kernelSize) : kernelSize(kernelSize) {}
+    MedianFilter(unsigned kernelSize);
     void apply(Image& img) const override;
+    ~MedianFilter() override = default;
+    int absToRel(int coordinate, int size) const;
+
 };
