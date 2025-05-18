@@ -1,1 +1,0 @@
-cpp doesn't return bool, it throws exceptions 

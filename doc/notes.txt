@@ -1,4 +1,3 @@
-during bmp file parsing, if the document is upsidedownwards, then the height and width shouldn't be a negative number! (it would cause error in picture.cpp)
-
+TODO!
 picture class throws an exception if try to achive a pixel that is out of width or height - i have to catch it
  
