@@ -23,6 +23,12 @@ public:
         this->b = b;
         this->a = a;
     }
+    void setPixel(const Pixel& pixel) {
+        r = pixel.r;
+        g = pixel.g;
+        b = pixel.b;
+        a = pixel.a;
+    }
 
     Pixel operator*(double factor) const{
         return Pixel(r * factor, g * factor, b * factor, a);

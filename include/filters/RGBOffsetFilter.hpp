@@ -12,4 +12,5 @@ class RGBOffsetFilter : public IFilter {
 public:
     RGBOffsetFilter(double redOffset, double greenOffset, double blueOffset) : redOffset(redOffset), greenOffset(greenOffset), blueOffset(blueOffset) {}
     void apply(Image& img) const override;   
+    ~RGBOffsetFilter() = default;
 };

@@ -9,7 +9,7 @@ class MedianFilter : public IFilter {
 public:
     MedianFilter(unsigned kernelSize);
     void apply(Image& img) const override;
-    ~MedianFilter() override = default;
+    ~MedianFilter() = default;
     int absToRel(int coordinate, int size) const;
 
 };
