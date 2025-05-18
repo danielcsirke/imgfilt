@@ -18,12 +18,12 @@ public:
 
     int centerX() const;
     int centerY() const;
-    int rows() const;
-    int cols() const;
+    int rows() const; // height
+    int cols() const; // width
+    int absToRel(int coordinate, int size) const; // convert absolute coordinates to relative coordinates to the center of the kernel
 
     double sum() const;
     void normalize(double epsilon = 1e-6);
     bool isNormalized(double epsilon = 1e-6) const;
     void scale(double factor);
-
 };
