@@ -15,6 +15,7 @@ public:
     void set(int row, int col, double value);
     void set(const KernelMatrix& values);
     const KernelMatrix& getValues() const; 
+    KernelMatrix& getValues(); 
 
     int centerX() const;
     int centerY() const;
