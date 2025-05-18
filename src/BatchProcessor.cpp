@@ -33,20 +33,24 @@ void BatchProcessor::process(const std::string& filename) {
 
 
     std::string line;
-    while (std::getline(file, line)) {
-        std::istringstream iss(line);
-        std::string command;
-        iss >> command;
+    while (std::getline(file, line)) { // Read each line from the file
+        std::istringstream iss(line); // Create a string stream from the line
+        std::string command; // Read the first word as the command
+        iss >> command; // Read the first word as the command
 
         if (command.empty()) continue; // Skip empty lines
         if (command[0] == '#') continue; // Skip comments
 
-        if (command == "MOL") { // long live and prosper Beautyful
-            std::cerr << "Soká éljen a MOL és leányvállalatai!" << std::endl;
+        if (command == "MOL") { // long live and prosper our Savior
+            std::cout << "Soká éljen a MOL és leányvállalatai!" << std::endl;
             continue;
         }
 
-        handleCommand(command, iss);
+        try{
+        handleCommand(command, iss); // Handle the command
+        } catch (const std::exception& e) {
+            std::cerr << "Error processing command: " << line << " - " << e.what() << std::endl;
+        }
     }
 
 }
@@ -124,18 +128,6 @@ void BatchProcessor::handleCommand(const std::string& command, std::istringstrea
 
 CommandType BatchProcessor::getCommandType(const std::string& cmd) {
 
-    /*stupid!
-    if (cmd == "INPUT") return CommandType::INPUT;
-    else if (cmd == "OUTPUT") return CommandType::OUTPUT;
-    else if (cmd == "CONTRAST") return CommandType::CONTRAST;
-    else if (cmd == "BRIGHTNESS") return CommandType::BRIGHTNESS;
-    else if (cmd == "BLUR") return CommandType::BLUR;
-    else if (cmd == "GAUSSIAN_BLUR") return CommandType::GAUSSIAN_BLUR;
-    else if (cmd == "MEDIAN") return CommandType::MEDIAN;
-    else if (cmd == "RGB_OFFSET") return CommandType::RGB_OFFSET;
-    else return CommandType::UNKNOWN;
-    */
-
     static const std::unordered_map<std::string, CommandType> commandMap = {
         {"INPUT", CommandType::INPUT},
         {"OUTPUT", CommandType::OUTPUT},
@@ -147,24 +139,24 @@ CommandType BatchProcessor::getCommandType(const std::string& cmd) {
         {"RGB_OFFSET", CommandType::RGB_OFFSET}
     };
 
-    auto it = commandMap.find(cmd);
-    if (it != commandMap.end()) {
+    auto it = commandMap.find(cmd); // Find the command in the map
+    if (it != commandMap.end()) {   // If found, return the corresponding CommandType
         return it->second;
     }
 
-    return CommandType::UNKNOWN;
+    return CommandType::UNKNOWN; // If not found, return UNKNOWN
 
 }   
 
 std::unique_ptr<IImageHandler> BatchProcessor::createHandlerFromExtension(const std::string& filename){
-    size_t dotPos = filename.find_last_of(".");
-    if (dotPos == std::string::npos) {
+    size_t dotPos = filename.find_last_of("."); // Find the last dot's position in the filename
+    if (dotPos == std::string::npos) { //If no dot is found, throw an error
         throw std::runtime_error("No file extension found in: " + filename);
     }
-    std::string extension = filename.substr(dotPos + 1);
+    std::string extension = filename.substr(dotPos + 1); //if the dot is found, extract the substring after the dot
 
-    if (extension == "bmp" || extension == "BMP")
-        return std::make_unique<BMPImageHandler>();
+    if (extension == "bmp" || extension == "BMP") // Check if the extension is "bmp" or "BMP"
+        return std::make_unique<BMPImageHandler>(); 
     else 
         throw std::runtime_error("Unsupported file format: " + filename);
 }

@@ -5,6 +5,9 @@ public:
     FilterSpec() {
         clear();
     }
+
+    ~FilterSpec() = default;
+
     bool hasContrast = false;
     double contrastFactor = 0;
 

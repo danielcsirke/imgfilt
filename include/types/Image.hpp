@@ -1,11 +1,12 @@
 #pragma once
 
 #include <vector>
+#include <stdexcept>
 
 #include "Pixel.hpp"
 
 class Image {
-    std::vector<std::vector<Pixel>> pixels;
+    std::vector<std::vector<Pixel>> pixels; // külső függőleges , belső vízszintes(sor)
     int width, height;
 public:
     Image() = default;
