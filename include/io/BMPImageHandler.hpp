@@ -5,6 +5,7 @@
 
 #include "IImageHandler.hpp"
 #include "types/Image.hpp"
+#include "types/microsoft.hpp"
 
 
 
@@ -15,4 +16,6 @@ public:
 
     std::unique_ptr<Image> load(const std::string& filename) const override;
     void save(const std::string& filename, const Image& image) const override;
+
+    void flipVertical(Image& img, BITMAPINFOHEADER& header) const;
 };
