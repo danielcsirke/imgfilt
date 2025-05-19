@@ -1,3 +1,0 @@
-TODO!
-picture class throws an exception if try to achive a pixel that is out of width or height - i have to catch it
- 
