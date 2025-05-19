@@ -6,8 +6,8 @@ imgfilt input.txt
 input.txt:
 
 INPUT input.bmp 
-BRIGHTNESS 12
+BRIGHTNESS 4
 CONTRAST 5
-GAMMA 1.8
+MEDIAN 3
 OUTPUT output.bmp
 

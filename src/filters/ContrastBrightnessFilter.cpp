@@ -1,5 +1,6 @@
 #include "filters/ContrastBrightnessFilter.hpp"
 #include "types/Image.hpp"
+#include <iostream> // debugging
 
 
 // A simple contrast and brightness filter 

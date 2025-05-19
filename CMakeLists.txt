@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(prog2hw VERSION 1.0 LANGUAGES CXX)
+project(imgfilt VERSION 1.0 LANGUAGES CXX)
 
 # Use modern C++ standard
 set(CMAKE_CXX_STANDARD 20)
@@ -8,27 +8,30 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Enable compile_commands.json for IDE integration (especially VSCode)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Gather all source files from src/
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
+
+# Set output directories for binaries
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+# Gather all source files from src/ recursively
+file(GLOB_RECURSE SOURCES
     src/*.cpp
 )
 
 # Create the main executable
-add_executable(prog2hw ${SOURCES})
+add_executable(imgfilt ${SOURCES})
 
-# Now that the target exists, attach the include directory to it
-target_include_directories(prog2hw
+# Include all relevant header directories
+target_include_directories(imgfilt
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/filters
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/filt_op
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/io
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/types
 )
 
-# DELETE:
-# Optional: Add sandbox tools (e.g., test scripts, later test drivers)
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/sandbox")
-    message(STATUS "Sandbox tools available in /sandbox")
-endif()
+# Optional: treat warnings as errors
+# target_compile_options(imgfilt PRIVATE -Wall -Wextra -Werror)
 
-# Prevent warning if tests folder exists but is not used yet
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/CMakeLists.txt")
-    add_subdirectory(tests)
-endif()
+# Optional: group sources by folders in IDEs
+# source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}/src PREFIX "Source Files" FILES ${SOURCES})

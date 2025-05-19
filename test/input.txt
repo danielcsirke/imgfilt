@@ -1,0 +1,21 @@
+# a fájlban a #-el megjelölt sorok kommentek. 
+
+
+INPUT input.bmp
+# BRIGHTNESS 3 
+# CONTRAST 2 
+# MEDIAN 3
+BLUR 9
+# GAUSSIAN_BLUR 3 5
+RGB_OFFSET 20 -10 6
+OUTPUT output.bmp
+
+INPUT input.bmp
+BRIGHTNESS 3 
+CONTRAST 2 
+OUTPUT output2.bmp
+
+MOL
+
+
+

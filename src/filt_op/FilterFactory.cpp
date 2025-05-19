@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "filt_op/kernelGenerators.hpp"
-#include <filt_op/FilterFactory.hpp>
+#include "filt_op/FilterFactory.hpp"
 #include "filters/ContrastBrightnessFilter.hpp"
 #include "filters/ConvolutionFilter.hpp"
 #include "filters/MedianFilter.hpp"

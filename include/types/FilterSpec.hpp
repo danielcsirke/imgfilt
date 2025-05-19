@@ -19,7 +19,7 @@ public:
 
     bool hasGaussian = false;
     unsigned gaussianBlurSize = 0; // must be odd
-    double gaussianBlurSigma = 0;
+    double gaussianBlurSigma = 1.0;
 
     bool hasMedian = false;
     unsigned medianKernelSize = 0; // must be odd

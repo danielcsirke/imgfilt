@@ -4,12 +4,14 @@
 #include <algorithm>
 
 
+
 void ConvolutionFilter::apply(Image& img) const {
 
     Image result(img.getWidth(), img.getHeight());
 
     // Iterate over each pixel in the image
     for (int imgRow = 0; imgRow < img.getHeight(); ++imgRow) {
+
         for (int imgCol = 0; imgCol < img.getWidth(); ++imgCol) {
             Pixel sum(0,0,0,0); // Initialize sum to zero
 
@@ -34,7 +36,7 @@ void ConvolutionFilter::apply(Image& img) const {
                 }
             }
 
-            result.setPixel(imgCol, imgRow, sum);
+            result.setPixel(imgRow, imgCol, sum);
         }
     }
 
