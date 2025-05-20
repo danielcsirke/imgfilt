@@ -1,0 +1,27 @@
+\doxysection{BMPImage\+Handler.\+hpp}
+\hypertarget{BMPImageHandler_8hpp_source}{}\label{BMPImageHandler_8hpp_source}\index{include/io/BMPImageHandler.hpp@{include/io/BMPImageHandler.hpp}}
+\mbox{\hyperlink{BMPImageHandler_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once\ }}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IImageHandler_8hpp}{IImageHandler.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Image_8hpp}{types/Image.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{microsoft_8hpp}{types/microsoft.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBMPImageHandler}{BMPImageHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIImageHandler}{IImageHandler}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classBMPImageHandler_a31aa51049346d1a030c21a6c0c927087}{BMPImageHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classBMPImageHandler_ae09828d2a69650e0e047172b6a9b801f}{\string~BMPImageHandler}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ std::unique\_ptr<Image>\ \mbox{\hyperlink{classBMPImageHandler_a33d2951602dce19376fad1ce3e416d66}{load}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBMPImageHandler_a9bd8edfe64dd9ac58db32c32c2521fb1}{save}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classImage}{Image}}\&\ image)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBMPImageHandler_a169e4989e88e27a2c1744b1a839001e7}{flipVertical}}(\mbox{\hyperlink{classImage}{Image}}\&\ img,\ \mbox{\hyperlink{structBITMAPINFOHEADER}{BITMAPINFOHEADER}}\&\ header)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \};}
+
+\end{DoxyCode}

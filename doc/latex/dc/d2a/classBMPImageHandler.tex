@@ -1,0 +1,126 @@
+\doxysection{BMPImage\+Handler Class Reference}
+\hypertarget{classBMPImageHandler}{}\label{classBMPImageHandler}\index{BMPImageHandler@{BMPImageHandler}}
+
+
+{\ttfamily \#include $<$BMPImage\+Handler.\+hpp$>$}
+
+
+
+Inheritance diagram for BMPImage\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{d1/d07/classBMPImageHandler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for BMPImage\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{d6/d9a/classBMPImageHandler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBMPImageHandler_a31aa51049346d1a030c21a6c0c927087}{BMPImage\+Handler}} ()=default
+\item 
+\mbox{\hyperlink{classBMPImageHandler_ae09828d2a69650e0e047172b6a9b801f}{\texorpdfstring{$\sim$}{\string~}\+BMPImage\+Handler}} () override
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classBMPImageHandler_a33d2951602dce19376fad1ce3e416d66}{load}} (const std\+::string \&filename) const override
+\item 
+void \mbox{\hyperlink{classBMPImageHandler_a9bd8edfe64dd9ac58db32c32c2521fb1}{save}} (const std\+::string \&filename, const \mbox{\hyperlink{classImage}{Image}} \&image) const override
+\item 
+void \mbox{\hyperlink{classBMPImageHandler_a169e4989e88e27a2c1744b1a839001e7}{flip\+Vertical}} (\mbox{\hyperlink{classImage}{Image}} \&img, \mbox{\hyperlink{structBITMAPINFOHEADER}{BITMAPINFOHEADER}} \&header) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIImageHandler}{IImage\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIImageHandler_ac04621732822126d02fc5cf2af15ef87}{\texorpdfstring{$\sim$}{\string~}\+IImage\+Handler}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBMPImageHandler_a31aa51049346d1a030c21a6c0c927087}\label{classBMPImageHandler_a31aa51049346d1a030c21a6c0c927087} 
+\index{BMPImageHandler@{BMPImageHandler}!BMPImageHandler@{BMPImageHandler}}
+\index{BMPImageHandler@{BMPImageHandler}!BMPImageHandler@{BMPImageHandler}}
+\doxysubsubsection{\texorpdfstring{BMPImageHandler()}{BMPImageHandler()}}
+{\footnotesize\ttfamily BMPImage\+Handler\+::\+BMPImage\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classBMPImageHandler_ae09828d2a69650e0e047172b6a9b801f}\label{classBMPImageHandler_ae09828d2a69650e0e047172b6a9b801f} 
+\index{BMPImageHandler@{BMPImageHandler}!````~BMPImageHandler@{\texorpdfstring{$\sim$}{\string~}BMPImageHandler}}
+\index{````~BMPImageHandler@{\texorpdfstring{$\sim$}{\string~}BMPImageHandler}!BMPImageHandler@{BMPImageHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BMPImageHandler()}{\string~BMPImageHandler()}}
+{\footnotesize\ttfamily BMPImage\+Handler\+::\texorpdfstring{$\sim$}{\string~}\+BMPImage\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBMPImageHandler_a169e4989e88e27a2c1744b1a839001e7}\label{classBMPImageHandler_a169e4989e88e27a2c1744b1a839001e7} 
+\index{BMPImageHandler@{BMPImageHandler}!flipVertical@{flipVertical}}
+\index{flipVertical@{flipVertical}!BMPImageHandler@{BMPImageHandler}}
+\doxysubsubsection{\texorpdfstring{flipVertical()}{flipVertical()}}
+{\footnotesize\ttfamily void BMPImage\+Handler\+::flip\+Vertical (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classImage}{Image}} \&}]{img,  }\item[{\mbox{\hyperlink{structBITMAPINFOHEADER}{BITMAPINFOHEADER}} \&}]{header }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{dc/d2a/classBMPImageHandler_a169e4989e88e27a2c1744b1a839001e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d2a/classBMPImageHandler_a169e4989e88e27a2c1744b1a839001e7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBMPImageHandler_a33d2951602dce19376fad1ce3e416d66}\label{classBMPImageHandler_a33d2951602dce19376fad1ce3e416d66} 
+\index{BMPImageHandler@{BMPImageHandler}!load@{load}}
+\index{load@{load}!BMPImageHandler@{BMPImageHandler}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ BMPImage\+Handler\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIImageHandler_a937c6d54bf886bebd645a7481b584b47}{IImage\+Handler}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d2a/classBMPImageHandler_a33d2951602dce19376fad1ce3e416d66_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBMPImageHandler_a9bd8edfe64dd9ac58db32c32c2521fb1}\label{classBMPImageHandler_a9bd8edfe64dd9ac58db32c32c2521fb1} 
+\index{BMPImageHandler@{BMPImageHandler}!save@{save}}
+\index{save@{save}!BMPImageHandler@{BMPImageHandler}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void BMPImage\+Handler\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const \mbox{\hyperlink{classImage}{Image}} \&}]{image }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIImageHandler_a62b80f5618c0dddf2bbc60b0e7fe1e48}{IImage\+Handler}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d2a/classBMPImageHandler_a9bd8edfe64dd9ac58db32c32c2521fb1_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/io/\mbox{\hyperlink{BMPImageHandler_8hpp}{BMPImage\+Handler.\+hpp}}\item 
+src/io/\mbox{\hyperlink{BMPImageHandler_8cpp}{BMPImage\+Handler.\+cpp}}\end{DoxyCompactItemize}

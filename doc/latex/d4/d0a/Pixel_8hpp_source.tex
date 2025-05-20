@@ -1,0 +1,50 @@
+\doxysection{Pixel.\+hpp}
+\hypertarget{Pixel_8hpp_source}{}\label{Pixel_8hpp_source}\index{include/types/Pixel.hpp@{include/types/Pixel.hpp}}
+\mbox{\hyperlink{Pixel_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPixel}{Pixel}}\ \{}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keywordtype}{double}\ r,\ g,\ b,\ a;}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{classPixel_af8dc670dcfdadbd35f077573261908d8}{Pixel}}(\textcolor{keywordtype}{double}\ r\ =\ 0,\ \textcolor{keywordtype}{double}\ g\ =\ 0,\ \textcolor{keywordtype}{double}\ b\ =\ 0,\ \textcolor{keywordtype}{double}\ a\ =\ 255)}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ :\ r(r),\ g(g),\ b(b),\ a(a)\ \{\}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classPixel_aec5af8c6eaaea01f91834c94b74f57c5}{getR}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ r;\ \}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classPixel_ab9656fdb1116bf1a1a74c434e234e401}{getG}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ g;\ \}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classPixel_a9db5f2f9ae2ccf8d0dbddd61a4523c4a}{getB}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ b;\ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classPixel_a93b756df51ac45cc1805bf2a033609a6}{getA}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ a;\ \}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPixel_abcc88ad478c604dc2f14288745c234d4}{setR}}(\textcolor{keywordtype}{double}\ value)\ \{\ r\ =\ value;\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPixel_a71f1091568ec495b74f9aae5706de7c2}{setG}}(\textcolor{keywordtype}{double}\ value)\ \{\ g\ =\ value;\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPixel_a276087f14e186ad85b2509e17afafd57}{setB}}(\textcolor{keywordtype}{double}\ value)\ \{\ b\ =\ value;\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPixel_afcb358aac2178078b9f885382ac37b79}{setA}}(\textcolor{keywordtype}{double}\ value)\ \{\ a\ =\ value;\ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPixel_ab26cffacb6c1446176d787359032b4a8}{setRGBA}}(\textcolor{keywordtype}{double}\ r,\ \textcolor{keywordtype}{double}\ g,\ \textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ a)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ this-\/>r\ =\ r;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ this-\/>g\ =\ g;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ this-\/>b\ =\ b;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ this-\/>a\ =\ a;}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPixel_a3388a7f158622a4cdabb0940aadcdf65}{setPixel}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPixel}{Pixel}}\&\ pixel)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ r\ =\ pixel.r;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ g\ =\ pixel.g;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ b\ =\ pixel.b;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ a\ =\ pixel.a;}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classPixel}{Pixel}}\ \mbox{\hyperlink{classPixel_a789ad5222c3db38ea32541cc547cfa2f}{operator*}}(\textcolor{keywordtype}{double}\ factor)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPixel}{Pixel}}(r\ *\ factor,\ g\ *\ factor,\ b\ *\ factor,\ a);}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classPixel}{Pixel}}\&\ \mbox{\hyperlink{classPixel_aec8f975b8dc65640fda267d79b594c89}{operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPixel}{Pixel}}\&\ other)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ r\ +=\ other.r;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ g\ +=\ other.g;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ b\ +=\ other.b;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ a\ =\ (a\ +\ other.a)\ /\ 2;\ \textcolor{comment}{//\ average\ alpha}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \};}
+
+\end{DoxyCode}

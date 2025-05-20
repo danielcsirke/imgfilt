@@ -1,0 +1,20 @@
+\doxysection{Contrast\+Brightness\+Filter.\+hpp}
+\hypertarget{ContrastBrightnessFilter_8hpp_source}{}\label{ContrastBrightnessFilter_8hpp_source}\index{include/filters/ContrastBrightnessFilter.hpp@{include/filters/ContrastBrightnessFilter.hpp}}
+\mbox{\hyperlink{ContrastBrightnessFilter_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IFilter_8hpp}{filt\_op/IFilter.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Image_8hpp}{types/Image.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classContrastBrightnessFilter}{ContrastBrightnessFilter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIFilter}{IFilter}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{double}\ contrastFactor\ =\ 1.0;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{double}\ brightnessFactor\ =\ 0.0;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \mbox{\hyperlink{classContrastBrightnessFilter_a66726fb81b9b86fbc3de9e4a340bc5c4}{ContrastBrightnessFilter}}(\textcolor{keywordtype}{double}\ contrastFactor\ =\ 1.0,\ \textcolor{keywordtype}{double}\ brightnessFactor\ =\ 0.0)\ :\ contrastFactor(contrastFactor),\ brightnessFactor(brightnessFactor)\ \{\}}
+\DoxyCodeLine{00012\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classContrastBrightnessFilter_a7a7b7853de9bead54be40d88148d14d8}{apply}}(\mbox{\hyperlink{classImage}{Image}}\&\ img)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00013\ \ \ \ \mbox{\hyperlink{classContrastBrightnessFilter_ac81e543340b4871109f27d27cbf5a2dd}{\string~ContrastBrightnessFilter}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ \};}
+
+\end{DoxyCode}

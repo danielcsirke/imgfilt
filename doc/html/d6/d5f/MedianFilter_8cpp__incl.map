@@ -1,0 +1,22 @@
+<map id="src/filters/MedianFilter.cpp" name="src/filters/MedianFilter.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="73,5,267,31"/>
+<area shape="rect" id="Node000002" href="$df/daa/MedianFilter_8hpp.html" title=" " alt="" coords="146,79,317,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,29,214,66,210,70,178,33"/>
+<area shape="rect" id="Node000003" href="$d0/da6/IFilter_8hpp.html" title=" " alt="" coords="95,152,226,177"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="163,32,148,53,137,79,135,95,137,110,148,139,143,141,132,111,129,95,131,78,144,51,158,29"/>
+<area shape="rect" id="Node000004" href="$d8/dde/Image_8hpp.html" title=" " alt="" coords="95,225,226,251"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="161,33,121,82,100,116,86,153,83,165,86,176,103,199,126,216,123,221,99,203,81,178,78,165,81,151,96,114,116,79,157,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,299,68,324"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="152,33,125,53,100,80,73,133,55,190,45,243,41,285,35,284,40,242,50,188,68,131,96,77,122,49,149,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="268,299,355,324"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="254,28,296,46,315,60,331,77,344,103,352,131,354,160,352,190,340,244,325,287,320,285,335,243,346,189,348,160,346,132,339,105,326,80,312,64,294,51,252,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="391,79,477,104"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="213,28,379,72,377,78,212,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="222,106,184,144,180,140,218,102"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="238,104,246,138,246,159,240,179,222,203,199,221,196,216,218,199,236,176,241,158,241,139,233,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="163,178,163,212,158,212,158,178"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="142,253,70,294,67,289,139,248"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="186,248,275,290,273,295,184,253"/>
+<area shape="rect" id="Node000007" href="$d4/d0a/Pixel_8hpp.html" title=" " alt="" coords="120,299,201,324"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="163,251,163,285,158,285,158,251"/>
+</map>

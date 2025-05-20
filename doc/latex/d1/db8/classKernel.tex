@@ -1,0 +1,269 @@
+\doxysection{Kernel Class Reference}
+\hypertarget{classKernel}{}\label{classKernel}\index{Kernel@{Kernel}}
+
+
+{\ttfamily \#include $<$Kernel.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKernel_a6780f66a33b52f4351e4aaeddf64e03f}{Kernel}} ()=default
+\item 
+\mbox{\hyperlink{classKernel_ad4d256b555e1214ae2601e206c507e38}{Kernel}} (\mbox{\hyperlink{Kernel_8hpp_a7b94cd7b533cf9dc6d025d3b59693dd1}{Kernel\+Matrix}} values)
+\item 
+double \mbox{\hyperlink{classKernel_a444312f137c540a02008bf49f8237510}{get\+Value}} (int row, int col) const
+\item 
+void \mbox{\hyperlink{classKernel_aff6c47fb0ecc44d0aee3d18b30fe4f7b}{set}} (int row, int col, double value)
+\item 
+void \mbox{\hyperlink{classKernel_ac142bfc327a92a5418b7fae0ad8ca039}{set}} (const \mbox{\hyperlink{Kernel_8hpp_a7b94cd7b533cf9dc6d025d3b59693dd1}{Kernel\+Matrix}} \&values)
+\item 
+const \mbox{\hyperlink{Kernel_8hpp_a7b94cd7b533cf9dc6d025d3b59693dd1}{Kernel\+Matrix}} \& \mbox{\hyperlink{classKernel_a9e36b3902f9597237488dc3ab86fa0e2}{get\+Values}} () const
+\item 
+\mbox{\hyperlink{Kernel_8hpp_a7b94cd7b533cf9dc6d025d3b59693dd1}{Kernel\+Matrix}} \& \mbox{\hyperlink{classKernel_a7fb31b52e6f6f926271879404044dfe7}{get\+Values}} ()
+\item 
+int \mbox{\hyperlink{classKernel_a02e39cf2a7e47fe1341b04cb6cd8f39d}{centerX}} () const
+\item 
+int \mbox{\hyperlink{classKernel_ae770fcae6afb01aa369a518a815cd081}{centerY}} () const
+\item 
+int \mbox{\hyperlink{classKernel_a5ed7513959e5398a48e0149fbf786209}{rows}} () const
+\item 
+int \mbox{\hyperlink{classKernel_a5f94f2c43479665eded0abfbb163b233}{cols}} () const
+\item 
+int \mbox{\hyperlink{classKernel_a7d1198708367e5f9752281e4a46f067d}{abs\+To\+Rel}} (int coordinate, int size) const
+\item 
+double \mbox{\hyperlink{classKernel_a41b59171bf5fbd2b4c493ead4fee53d6}{sum}} () const
+\item 
+void \mbox{\hyperlink{classKernel_ad257d19cbde87a4d622d7ea5ef9d6536}{normalize}} (double epsilon=1e-\/6)
+\item 
+bool \mbox{\hyperlink{classKernel_adeac60b1e371a155c0a9a60179d30edb}{is\+Normalized}} (double epsilon=1e-\/6) const
+\item 
+void \mbox{\hyperlink{classKernel_a368778329b2c461cdbeda5fa5676fae2}{scale}} (double factor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classKernel_a6780f66a33b52f4351e4aaeddf64e03f}\label{classKernel_a6780f66a33b52f4351e4aaeddf64e03f} 
+\index{Kernel@{Kernel}!Kernel@{Kernel}}
+\index{Kernel@{Kernel}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{Kernel()}{Kernel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Kernel\+::\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classKernel_ad4d256b555e1214ae2601e206c507e38}\label{classKernel_ad4d256b555e1214ae2601e206c507e38} 
+\index{Kernel@{Kernel}!Kernel@{Kernel}}
+\index{Kernel@{Kernel}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{Kernel()}{Kernel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Kernel\+::\+Kernel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Kernel_8hpp_a7b94cd7b533cf9dc6d025d3b59693dd1}{Kernel\+Matrix}}}]{values }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{d1/db8/classKernel_ad4d256b555e1214ae2601e206c507e38_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKernel_a7d1198708367e5f9752281e4a46f067d}\label{classKernel_a7d1198708367e5f9752281e4a46f067d} 
+\index{Kernel@{Kernel}!absToRel@{absToRel}}
+\index{absToRel@{absToRel}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{absToRel()}{absToRel()}}
+{\footnotesize\ttfamily int Kernel\+::abs\+To\+Rel (\begin{DoxyParamCaption}\item[{int}]{coordinate,  }\item[{int}]{size }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{d1/db8/classKernel_a7d1198708367e5f9752281e4a46f067d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_a02e39cf2a7e47fe1341b04cb6cd8f39d}\label{classKernel_a02e39cf2a7e47fe1341b04cb6cd8f39d} 
+\index{Kernel@{Kernel}!centerX@{centerX}}
+\index{centerX@{centerX}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{centerX()}{centerX()}}
+{\footnotesize\ttfamily int Kernel\+::centerX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d1/db8/classKernel_a02e39cf2a7e47fe1341b04cb6cd8f39d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_ae770fcae6afb01aa369a518a815cd081}\label{classKernel_ae770fcae6afb01aa369a518a815cd081} 
+\index{Kernel@{Kernel}!centerY@{centerY}}
+\index{centerY@{centerY}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{centerY()}{centerY()}}
+{\footnotesize\ttfamily int Kernel\+::centerY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{d1/db8/classKernel_ae770fcae6afb01aa369a518a815cd081_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_a5f94f2c43479665eded0abfbb163b233}\label{classKernel_a5f94f2c43479665eded0abfbb163b233} 
+\index{Kernel@{Kernel}!cols@{cols}}
+\index{cols@{cols}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily int Kernel\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/db8/classKernel_a5f94f2c43479665eded0abfbb163b233_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_a444312f137c540a02008bf49f8237510}\label{classKernel_a444312f137c540a02008bf49f8237510} 
+\index{Kernel@{Kernel}!getValue@{getValue}}
+\index{getValue@{getValue}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double Kernel\+::get\+Value (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{d1/db8/classKernel_a444312f137c540a02008bf49f8237510_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{d1/db8/classKernel_a444312f137c540a02008bf49f8237510_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_a7fb31b52e6f6f926271879404044dfe7}\label{classKernel_a7fb31b52e6f6f926271879404044dfe7} 
+\index{Kernel@{Kernel}!getValues@{getValues}}
+\index{getValues@{getValues}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Kernel_8hpp_a7b94cd7b533cf9dc6d025d3b59693dd1}{Kernel\+Matrix}} \& Kernel\+::get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classKernel_a9e36b3902f9597237488dc3ab86fa0e2}\label{classKernel_a9e36b3902f9597237488dc3ab86fa0e2} 
+\index{Kernel@{Kernel}!getValues@{getValues}}
+\index{getValues@{getValues}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{Kernel_8hpp_a7b94cd7b533cf9dc6d025d3b59693dd1}{Kernel\+Matrix}} \& Kernel\+::get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classKernel_adeac60b1e371a155c0a9a60179d30edb}\label{classKernel_adeac60b1e371a155c0a9a60179d30edb} 
+\index{Kernel@{Kernel}!isNormalized@{isNormalized}}
+\index{isNormalized@{isNormalized}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{isNormalized()}{isNormalized()}}
+{\footnotesize\ttfamily bool Kernel\+::is\+Normalized (\begin{DoxyParamCaption}\item[{double}]{epsilon = {\ttfamily 1e-\/6} }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/db8/classKernel_adeac60b1e371a155c0a9a60179d30edb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_ad257d19cbde87a4d622d7ea5ef9d6536}\label{classKernel_ad257d19cbde87a4d622d7ea5ef9d6536} 
+\index{Kernel@{Kernel}!normalize@{normalize}}
+\index{normalize@{normalize}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily void Kernel\+::normalize (\begin{DoxyParamCaption}\item[{double}]{epsilon = {\ttfamily 1e-\/6} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/db8/classKernel_ad257d19cbde87a4d622d7ea5ef9d6536_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/db8/classKernel_ad257d19cbde87a4d622d7ea5ef9d6536_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_a5ed7513959e5398a48e0149fbf786209}\label{classKernel_a5ed7513959e5398a48e0149fbf786209} 
+\index{Kernel@{Kernel}!rows@{rows}}
+\index{rows@{rows}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily int Kernel\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/db8/classKernel_a5ed7513959e5398a48e0149fbf786209_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_a368778329b2c461cdbeda5fa5676fae2}\label{classKernel_a368778329b2c461cdbeda5fa5676fae2} 
+\index{Kernel@{Kernel}!scale@{scale}}
+\index{scale@{scale}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Kernel\+::scale (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{d1/db8/classKernel_a368778329b2c461cdbeda5fa5676fae2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_ac142bfc327a92a5418b7fae0ad8ca039}\label{classKernel_ac142bfc327a92a5418b7fae0ad8ca039} 
+\index{Kernel@{Kernel}!set@{set}}
+\index{set@{set}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Kernel\+::set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Kernel_8hpp_a7b94cd7b533cf9dc6d025d3b59693dd1}{Kernel\+Matrix}} \&}]{values }\end{DoxyParamCaption})}
+
+\Hypertarget{classKernel_aff6c47fb0ecc44d0aee3d18b30fe4f7b}\label{classKernel_aff6c47fb0ecc44d0aee3d18b30fe4f7b} 
+\index{Kernel@{Kernel}!set@{set}}
+\index{set@{set}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Kernel\+::set (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{d1/db8/classKernel_aff6c47fb0ecc44d0aee3d18b30fe4f7b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKernel_a41b59171bf5fbd2b4c493ead4fee53d6}\label{classKernel_a41b59171bf5fbd2b4c493ead4fee53d6} 
+\index{Kernel@{Kernel}!sum@{sum}}
+\index{sum@{sum}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}}
+{\footnotesize\ttfamily double Kernel\+::sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{d1/db8/classKernel_a41b59171bf5fbd2b4c493ead4fee53d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/db8/classKernel_a41b59171bf5fbd2b4c493ead4fee53d6_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/types/\mbox{\hyperlink{Kernel_8hpp}{Kernel.\+hpp}}\item 
+src/types/\mbox{\hyperlink{Kernel_8cpp}{Kernel.\+cpp}}\end{DoxyCompactItemize}

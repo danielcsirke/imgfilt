@@ -1,0 +1,37 @@
+<map id="include/io/BatchProcessor.hpp" name="include/io/BatchProcessor.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,5,468,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="25,152,84,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,33,156,52,113,65,85,81,75,93,67,108,59,139,54,137,62,106,71,90,82,77,111,60,155,47,257,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="57,225,134,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,24,205,30,156,41,108,57,64,81,36,101,16,123,8,148,10,161,15,176,34,199,58,217,55,221,30,203,11,179,4,162,3,147,12,120,32,97,61,76,106,52,155,36,204,25,251,18"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="641,79,716,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="411,28,628,76,627,81,410,33"/>
+<area shape="rect" id="Node000005" href="$d9/dd4/IImageHandler_8hpp.html" title=" " alt="" coords="96,79,242,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="330,33,214,76,212,71,328,28"/>
+<area shape="rect" id="Node000006" href="$d8/dde/Image_8hpp.html" title=" " alt="" coords="285,299,416,324"/>
+<area shape="poly" id="edge17_Node000001_Node000006" title=" " alt="" coords="409,28,473,49,538,80,564,100,581,123,588,150,581,178,566,202,548,222,505,256,457,280,412,297,410,292,455,276,502,251,545,218,562,199,576,176,583,150,577,126,560,104,535,85,471,54,407,33"/>
+<area shape="rect" id="Node000010" href="$d1/d64/FilterPipeline_8hpp.html" title=" " alt="" coords="209,152,388,177"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="354,32,326,80,307,139,302,137,321,78,349,29"/>
+<area shape="rect" id="Node000012" href="$d9/d72/FilterFactory_8hpp.html" title=" " alt="" coords="336,79,508,104"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="372,29,405,66,401,70,368,33"/>
+<area shape="rect" id="Node000014" href="$d2/d11/CommandType_8hpp.html" title=" " alt="" coords="740,79,926,104"/>
+<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="436,28,744,74,743,79,435,33"/>
+<area shape="poly" id="edge9_Node000005_Node000002" title=" " alt="" coords="152,106,86,147,83,142,149,102"/>
+<area shape="poly" id="edge10_Node000005_Node000003" title=" " alt="" coords="165,106,110,214,105,212,161,103"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="173,104,182,138,199,176,227,211,260,242,322,289,319,293,256,246,223,214,195,179,177,140,168,105"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="219,372,282,397"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="336,326,279,366,276,362,333,322"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="412,372,499,397"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="369,322,429,362,426,367,366,326"/>
+<area shape="rect" id="Node000009" href="$d4/d0a/Pixel_8hpp.html" title=" " alt="" coords="307,372,388,397"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="353,324,351,359,346,358,347,324"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="267,180,142,223,140,218,265,175"/>
+<area shape="poly" id="edge14_Node000010_Node000006" title=" " alt="" coords="304,177,326,250,341,285,336,287,321,252,299,178"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="298,178,258,359,253,358,293,177"/>
+<area shape="rect" id="Node000011" href="$d0/da6/IFilter_8hpp.html" title=" " alt="" coords="336,225,466,251"/>
+<area shape="poly" id="edge15_Node000010_Node000011" title=" " alt="" coords="316,175,374,215,371,219,313,180"/>
+<area shape="poly" id="edge16_Node000011_Node000006" title=" " alt="" coords="395,253,369,289,364,286,390,249"/>
+<area shape="poly" id="edge19_Node000012_Node000010" title=" " alt="" coords="404,106,332,147,329,143,401,102"/>
+<area shape="rect" id="Node000013" href="$d6/d0d/FilterSpec_8hpp.html" title=" " alt="" coords="412,152,566,177"/>
+<area shape="poly" id="edge20_Node000012_Node000013" title=" " alt="" coords="435,103,471,140,467,144,431,106"/>
+</map>

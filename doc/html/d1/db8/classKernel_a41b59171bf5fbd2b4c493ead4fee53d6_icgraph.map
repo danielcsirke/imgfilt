@@ -1,0 +1,18 @@
+<map id="Kernel::sum" name="Kernel::sum">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1284,31,1383,56"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="1364,20,1355,12,1333,9,1315,11,1305,16,1303,22,1308,29,1304,32,1298,22,1301,13,1313,6,1333,4,1358,8,1368,16"/>
+<area shape="rect" id="Node000002" href="$d1/db8/classKernel.html#adeac60b1e371a155c0a9a60179d30edb" title=" " alt="" coords="1079,5,1236,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1270,37,1236,32,1237,27,1271,32"/>
+<area shape="rect" id="Node000003" href="$d1/db8/classKernel.html#ad257d19cbde87a4d622d7ea5ef9d6536" title=" " alt="" coords="1089,55,1225,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1271,55,1226,61,1225,55,1270,49"/>
+<area shape="rect" id="Node000004" href="$da/d1c/namespacekernelGenerators.html#a1c0479ec9adbffcd5acf4d5aea266bbb" title=" " alt="" coords="848,47,1031,87"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1075,70,1031,70,1031,65,1075,65"/>
+<area shape="rect" id="Node000005" href="$d4/df6/classFilterFactory.html#a3bcc4b6e41115f88dd815994712023c8" title=" " alt="" coords="625,55,800,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="834,70,800,70,800,65,834,65"/>
+<area shape="rect" id="Node000006" href="$d7/d6a/classBatchProcessor.html#a6e71b8448e65399c6c127baa9a26083b" title=" " alt="" coords="336,55,577,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="612,70,578,70,578,65,612,65"/>
+<area shape="rect" id="Node000007" href="$d7/d6a/classBatchProcessor.html#a822b1f9c8ec15c5b6efe3af915d703f4" title=" " alt="" coords="108,55,288,80"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="322,70,288,70,288,65,322,65"/>
+<area shape="rect" id="Node000008" href="$df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,55,60,80"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="94,70,60,70,60,65,94,65"/>
+</map>

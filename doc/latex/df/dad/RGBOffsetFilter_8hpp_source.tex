@@ -1,0 +1,22 @@
+\doxysection{RGBOffset\+Filter.\+hpp}
+\hypertarget{RGBOffsetFilter_8hpp_source}{}\label{RGBOffsetFilter_8hpp_source}\index{include/filters/RGBOffsetFilter.hpp@{include/filters/RGBOffsetFilter.hpp}}
+\mbox{\hyperlink{RGBOffsetFilter_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once\ }}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IFilter_8hpp}{filt\_op/IFilter.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Image_8hpp}{types/Image.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRGBOffsetFilter}{RGBOffsetFilter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIFilter}{IFilter}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{double}\ redOffset;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{double}\ greenOffset;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ blueOffset;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classRGBOffsetFilter_aa3628de42173711280a5682b646c39f1}{RGBOffsetFilter}}(\textcolor{keywordtype}{double}\ redOffset,\ \textcolor{keywordtype}{double}\ greenOffset,\ \textcolor{keywordtype}{double}\ blueOffset)\ :\ redOffset(redOffset),\ greenOffset(greenOffset),\ blueOffset(blueOffset)\ \{\}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRGBOffsetFilter_a16bd26af94e728b3d0b27def0bedc061}{apply}}(\mbox{\hyperlink{classImage}{Image}}\&\ img)\ \textcolor{keyword}{const\ override};\ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classRGBOffsetFilter_aa3a9ba9666e8f2884c96d87d48183429}{\string~RGBOffsetFilter}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00016\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,11 @@
+<map id="FilterPipeline::add" name="FilterPipeline::add">
+<area shape="rect" id="Node000001" title=" " alt="" coords="848,5,987,31"/>
+<area shape="rect" id="Node000002" href="$d4/df6/classFilterFactory.html#a3bcc4b6e41115f88dd815994712023c8" title=" " alt="" coords="625,5,800,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="834,21,800,21,800,15,834,15"/>
+<area shape="rect" id="Node000003" href="$d7/d6a/classBatchProcessor.html#a6e71b8448e65399c6c127baa9a26083b" title=" " alt="" coords="336,5,577,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="612,21,578,21,578,15,612,15"/>
+<area shape="rect" id="Node000004" href="$d7/d6a/classBatchProcessor.html#a822b1f9c8ec15c5b6efe3af915d703f4" title=" " alt="" coords="108,5,288,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="322,21,288,21,288,15,322,15"/>
+<area shape="rect" id="Node000005" href="$df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

@@ -1,0 +1,58 @@
+\doxysection{Filter\+Spec.\+hpp}
+\hypertarget{FilterSpec_8hpp_source}{}\label{FilterSpec_8hpp_source}\index{include/types/FilterSpec.hpp@{include/types/FilterSpec.hpp}}
+\mbox{\hyperlink{FilterSpec_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFilterSpec}{FilterSpec}}\ \{}
+\DoxyCodeLine{00004\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00005\ \ \ \ \ \mbox{\hyperlink{classFilterSpec_a8f6dcd5ee7001ccaa32f621f58f7e3f7}{FilterSpec}}()\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_a2327d1bf6d4ab11c13f9560e28530a87}{clear}}();}
+\DoxyCodeLine{00007\ \ \ \ \ \}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classFilterSpec_a902f778f239c5368f28095a8b873e056}{\string~FilterSpec}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFilterSpec_ac5653ee3ea2daa3ed7830f55ef32934e}{hasContrast}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFilterSpec_ab7236c75b363e78486bc970f6562c771}{contrastFactor}}\ =\ 0;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFilterSpec_ab262659a310106348edb504eb59215bd}{hasBrightness}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFilterSpec_a8c85d697c7adb22d74d8115a29f36c2b}{brightnessFactor}}\ =\ 0;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFilterSpec_a1278017e8f43dde77d98ed8283c517f7}{hasBlur}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{classFilterSpec_a01204626dabd656887658dc7b8ea0a32}{blur}}\ =\ 0;\ \textcolor{comment}{//\ must\ be\ odd}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFilterSpec_a8b7e95005db377850686905ef67d1497}{hasGaussian}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{classFilterSpec_ac26d342ff69bb777989dd72fba6fa5e6}{gaussianBlurSize}}\ =\ 0;\ \textcolor{comment}{//\ must\ be\ odd}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFilterSpec_acb2bc3e9ad12c602ad284e984bf7bacc}{gaussianBlurSigma}}\ =\ 1.0;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFilterSpec_afa11f62bfbe181cfaa4c2a10ac619609}{hasMedian}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00025\ \ \ \ \ uint\ \mbox{\hyperlink{classFilterSpec_ae24e94ca0e8f2ba5541ce806fd8d228f}{medianKernelSize}}\ =\ 0;\ \textcolor{comment}{//\ must\ be\ odd}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFilterSpec_a0040d3d4474c67f86deaf212f0aca7a9}{hasRGBOffset}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFilterSpec_ad1f7e22da58963db2c494f5711517804}{rOffset}}\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFilterSpec_a7022a8cd735b324e3f87876788f73fce}{gOffset}}\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFilterSpec_aa034f7ebac213bbc3a5d41a2634269b9}{bOffset}}\ =\ 0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFilterSpec_a2327d1bf6d4ab11c13f9560e28530a87}{clear}}()\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_ac5653ee3ea2daa3ed7830f55ef32934e}{hasContrast}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_ab7236c75b363e78486bc970f6562c771}{contrastFactor}}\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_ab262659a310106348edb504eb59215bd}{hasBrightness}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_a8c85d697c7adb22d74d8115a29f36c2b}{brightnessFactor}}\ =\ 0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_a1278017e8f43dde77d98ed8283c517f7}{hasBlur}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_a01204626dabd656887658dc7b8ea0a32}{blur}}\ =\ 0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_a8b7e95005db377850686905ef67d1497}{hasGaussian}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_ac26d342ff69bb777989dd72fba6fa5e6}{gaussianBlurSize}}\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_acb2bc3e9ad12c602ad284e984bf7bacc}{gaussianBlurSigma}}\ =\ 1.0;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_afa11f62bfbe181cfaa4c2a10ac619609}{hasMedian}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_ae24e94ca0e8f2ba5541ce806fd8d228f}{medianKernelSize}}\ =\ 0;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_a0040d3d4474c67f86deaf212f0aca7a9}{hasRGBOffset}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFilterSpec_ad1f7e22da58963db2c494f5711517804}{rOffset}}\ =\ \mbox{\hyperlink{classFilterSpec_a7022a8cd735b324e3f87876788f73fce}{gOffset}}\ =\ \mbox{\hyperlink{classFilterSpec_aa034f7ebac213bbc3a5d41a2634269b9}{bOffset}}\ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

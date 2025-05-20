@@ -1,0 +1,9 @@
+<map id="Image::setPixel" name="Image::setPixel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="232,77,355,102"/>
+<area shape="rect" id="Node000002" href="$d6/d96/classContrastBrightnessFilter.html#a7a7b7853de9bead54be40d88148d14d8" title=" " alt="" coords="5,5,184,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,75,157,48,158,43,241,70"/>
+<area shape="rect" id="Node000003" href="$de/d8c/classConvolutionFilter.html#aa5e82ddd0f363421028aa50769eee970" title=" " alt="" coords="24,69,165,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,92,165,92,165,87,218,87"/>
+<area shape="rect" id="Node000004" href="$d6/d25/classMedianFilter.html#aaaee0ebe39188c78166727087ad4ca62" title=" " alt="" coords="21,134,168,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="237,108,185,124,141,137,140,131,183,119,236,103"/>
+</map>

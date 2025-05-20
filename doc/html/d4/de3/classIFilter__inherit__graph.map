@@ -1,0 +1,11 @@
+<map id="IFilter" name="IFilter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="316,5,375,31"/>
+<area shape="rect" id="Node000002" href="$d6/d96/classContrastBrightnessFilter.html" title=" " alt="" coords="5,79,184,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="303,34,136,81,134,76,302,29"/>
+<area shape="rect" id="Node000003" href="$de/d8c/classConvolutionFilter.html" title=" " alt="" coords="208,79,341,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="326,43,288,80,284,77,322,39"/>
+<area shape="rect" id="Node000004" href="$d6/d25/classMedianFilter.html" title=" " alt="" coords="366,79,469,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="369,39,408,77,404,80,365,43"/>
+<area shape="rect" id="Node000005" href="$d3/dcf/classRGBOffsetFilter.html" title=" " alt="" coords="493,79,616,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="389,31,522,76,520,81,387,36"/>
+</map>

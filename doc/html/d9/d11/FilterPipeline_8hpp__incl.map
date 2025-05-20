@@ -1,0 +1,17 @@
+<map id="include/filt_op/FilterPipeline.hpp" name="include/filt_op/FilterPipeline.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="8,5,239,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,225,68,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,33,63,52,49,65,38,80,26,113,24,149,27,183,32,212,27,213,21,184,18,149,21,112,33,77,45,61,59,48,92,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="47,79,125,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="120,32,101,68,96,65,115,30"/>
+<area shape="rect" id="Node000004" href="$d8/dde/Image_8hpp.html" title=" " alt="" coords="97,152,227,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="129,30,158,138,153,139,124,32"/>
+<area shape="rect" id="Node000007" href="$d0/da6/IFilter_8hpp.html" title=" " alt="" coords="199,79,330,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="147,28,231,70,228,75,145,33"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="143,180,70,221,68,216,141,175"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="105,225,192,251"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="162,178,156,212,151,211,157,177"/>
+<area shape="rect" id="Node000006" href="$d4/d0a/Pixel_8hpp.html" title=" " alt="" coords="216,225,297,251"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="179,175,232,215,229,219,176,179"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="250,106,192,146,189,142,247,102"/>
+</map>

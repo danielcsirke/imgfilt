@@ -1,0 +1,14 @@
+<map id="include/filters/ContrastBrightnessFilter.hpp" name="include/filters/ContrastBrightnessFilter.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="51,5,220,45"/>
+<area shape="rect" id="Node000002" href="$d0/da6/IFilter_8hpp.html" title=" " alt="" coords="19,93,150,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,47,102,83,97,80,121,44"/>
+<area shape="rect" id="Node000003" href="$d8/dde/Image_8hpp.html" title=" " alt="" coords="70,167,201,192"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="149,45,162,79,166,99,165,119,151,155,146,153,159,118,161,99,157,80,144,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,117,121,154,117,157,91,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,240,68,265"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="121,194,65,234,62,230,118,190"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="92,240,179,265"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="138,192,138,226,133,226,133,192"/>
+<area shape="rect" id="Node000006" href="$d4/d0a/Pixel_8hpp.html" title=" " alt="" coords="203,240,284,265"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="154,190,216,230,213,235,151,194"/>
+</map>

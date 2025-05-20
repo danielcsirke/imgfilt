@@ -1,0 +1,21 @@
+<map id="MedianFilter::apply" name="MedianFilter::apply">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,203,152,228"/>
+<area shape="rect" id="Node000002" href="$d6/d25/classMedianFilter.html#a21784fc0b3811f4186f3fdc04222982b" title=" " alt="" coords="200,5,369,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,202,98,169,123,125,156,79,198,40,207,34,210,39,202,44,160,83,127,128,103,171,88,204"/>
+<area shape="rect" id="Node000003" href="$d8/d00/classImage.html#adee9bd20c718f3137e2e920c94a715c9" title=" " alt="" coords="243,55,327,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="87,201,131,147,162,116,199,89,229,76,231,81,201,94,166,120,135,150,91,204"/>
+<area shape="rect" id="Node000004" href="$d8/d00/classImage.html#a1cd7587f88b6932b5269051d1ba08ff9" title=" " alt="" coords="217,104,352,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="96,200,141,170,199,138,217,131,219,136,201,143,144,174,99,205"/>
+<area shape="rect" id="Node000005" href="$d8/d00/classImage.html#a36bcae4838228d574738249a87dc4464" title=" " alt="" coords="219,153,350,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="132,200,217,179,218,185,133,205"/>
+<area shape="rect" id="Node000006" href="$d0/dd6/classPixel.html#afcb358aac2178078b9f885382ac37b79" title=" " alt="" coords="239,203,330,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="152,213,225,213,225,218,152,218"/>
+<area shape="rect" id="Node000007" href="$d0/dd6/classPixel.html#a276087f14e186ad85b2509e17afafd57" title=" " alt="" coords="239,252,330,277"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="133,225,227,248,225,253,132,231"/>
+<area shape="rect" id="Node000008" href="$d0/dd6/classPixel.html#a71f1091568ec495b74f9aae5706de7c2" title=" " alt="" coords="239,301,330,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="99,226,144,256,201,286,227,296,225,301,199,291,141,260,96,230"/>
+<area shape="rect" id="Node000009" href="$d8/d00/classImage.html#a6dd65d408f5cb14e7eaf5d96fe00a99e" title=" " alt="" coords="223,351,346,376"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="91,226,135,279,166,310,201,336,216,343,213,348,199,340,163,314,131,283,87,230"/>
+<area shape="rect" id="Node000010" href="$d0/dd6/classPixel.html#abcc88ad478c604dc2f14288745c234d4" title=" " alt="" coords="239,400,330,425"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="88,227,103,259,128,302,161,347,202,385,228,399,225,403,198,390,157,350,123,305,98,262,83,229"/>
+</map>

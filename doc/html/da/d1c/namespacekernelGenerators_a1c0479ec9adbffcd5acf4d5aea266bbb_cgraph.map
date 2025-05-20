@@ -1,0 +1,14 @@
+<map id="kernelGenerators::createGaussianBlurKernel" name="kernelGenerators::createGaussianBlurKernel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,188,79"/>
+<area shape="rect" id="Node000002" href="$d1/db8/classKernel.html#ad257d19cbde87a4d622d7ea5ef9d6536" title=" " alt="" coords="236,47,372,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,57,222,57,222,62,188,62"/>
+<area shape="rect" id="Node000003" href="$d1/db8/classKernel.html#a5f94f2c43479665eded0abfbb163b233" title=" " alt="" coords="569,23,667,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,44,369,24,419,7,457,3,495,4,564,16,563,22,495,10,457,8,421,13,371,29,329,49"/>
+<area shape="rect" id="Node000004" href="$d1/db8/classKernel.html#a5ed7513959e5398a48e0149fbf786209" title=" " alt="" coords="567,72,669,97"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="352,69,420,82,489,86,553,85,553,91,488,91,420,87,351,75"/>
+<area shape="rect" id="Node000005" href="$d1/db8/classKernel.html#a41b59171bf5fbd2b4c493ead4fee53d6" title=" " alt="" coords="420,47,519,72"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="372,57,406,57,406,62,372,62"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="518,49,555,43,556,48,519,54"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="519,65,554,71,553,76,518,70"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="444,48,439,38,442,29,452,22,469,20,490,23,498,32,495,36,487,28,469,25,454,27,446,32,445,38,449,45"/>
+</map>

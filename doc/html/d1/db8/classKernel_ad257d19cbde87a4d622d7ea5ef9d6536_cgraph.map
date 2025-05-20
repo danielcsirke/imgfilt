@@ -1,0 +1,12 @@
+<map id="Kernel::normalize" name="Kernel::normalize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,141,72"/>
+<area shape="rect" id="Node000002" href="$d1/db8/classKernel.html#a5f94f2c43479665eded0abfbb163b233" title=" " alt="" coords="339,23,436,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,44,138,24,189,7,226,3,265,4,334,16,333,22,264,10,227,8,190,13,140,29,98,49"/>
+<area shape="rect" id="Node000003" href="$d1/db8/classKernel.html#a5ed7513959e5398a48e0149fbf786209" title=" " alt="" coords="336,72,439,97"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,69,190,82,258,86,322,85,322,91,258,91,189,87,121,75"/>
+<area shape="rect" id="Node000004" href="$d1/db8/classKernel.html#a41b59171bf5fbd2b4c493ead4fee53d6" title=" " alt="" coords="189,47,288,72"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,57,176,57,176,62,142,62"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="288,49,324,43,325,48,289,54"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="289,65,323,71,322,76,288,70"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="214,48,209,38,211,29,222,22,239,20,259,23,268,32,264,36,256,28,239,25,223,27,216,32,214,38,218,45"/>
+</map>

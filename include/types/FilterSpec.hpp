@@ -22,7 +22,7 @@ public:
     double gaussianBlurSigma = 1.0;
 
     bool hasMedian = false;
-    unsigned medianKernelSize = 0; // must be odd
+    uint medianKernelSize = 0; // must be odd
 
     bool hasRGBOffset = false;
     double rOffset = 0;
@@ -41,7 +41,7 @@ public:
 
         hasGaussian = false;
         gaussianBlurSize = 0;
-        gaussianBlurSigma = 0;
+        gaussianBlurSigma = 1.0;
 
         hasMedian = false;
         medianKernelSize = 0;

@@ -1,0 +1,21 @@
+<map id="ConvolutionFilter::apply" name="ConvolutionFilter::apply">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,174,147,214"/>
+<area shape="rect" id="Node000002" href="$d1/db8/classKernel.html#a7d1198708367e5f9752281e4a46f067d" title=" " alt="" coords="197,5,327,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,172,127,108,158,72,193,40,201,35,204,39,196,44,161,75,131,111,90,175"/>
+<area shape="rect" id="Node000003" href="$d8/d00/classImage.html#adee9bd20c718f3137e2e920c94a715c9" title=" " alt="" coords="220,55,304,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,172,140,135,193,97,217,84,219,89,196,102,144,140,101,176"/>
+<area shape="rect" id="Node000004" href="$d1/db8/classKernel.html#a5f94f2c43479665eded0abfbb163b233" title=" " alt="" coords="380,181,477,207"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,171,151,154,194,141,262,131,292,133,330,141,367,154,399,172,397,176,365,159,329,146,292,138,262,136,195,146,153,159,115,176"/>
+<area shape="rect" id="Node000005" href="$d8/d00/classImage.html#a1cd7587f88b6932b5269051d1ba08ff9" title=" " alt="" coords="195,156,329,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="147,182,181,177,182,182,148,187"/>
+<area shape="rect" id="Node000006" href="$d1/db8/classKernel.html#a444312f137c540a02008bf49f8237510" title=" " alt="" coords="198,205,326,231"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="148,200,184,205,184,211,147,206"/>
+<area shape="rect" id="Node000007" href="$d1/db8/classKernel.html#a5ed7513959e5398a48e0149fbf786209" title=" " alt="" coords="377,231,480,256"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="116,212,154,228,195,241,239,247,283,250,364,247,364,253,283,255,238,252,194,246,152,233,114,217"/>
+<area shape="rect" id="Node000008" href="$d8/d00/classImage.html#a36bcae4838228d574738249a87dc4464" title=" " alt="" coords="197,307,327,332"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="101,212,144,248,196,285,220,298,217,303,193,290,141,252,98,216"/>
+<area shape="rect" id="Node000009" href="$d8/d00/classImage.html#a6dd65d408f5cb14e7eaf5d96fe00a99e" title=" " alt="" coords="201,356,323,381"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="90,213,132,276,161,312,196,343,204,347,201,352,193,347,158,315,127,279,86,215"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="326,206,366,200,367,206,327,211"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="327,225,364,231,363,236,326,230"/>
+</map>

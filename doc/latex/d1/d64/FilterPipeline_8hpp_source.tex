@@ -1,0 +1,25 @@
+\doxysection{Filter\+Pipeline.\+hpp}
+\hypertarget{FilterPipeline_8hpp_source}{}\label{FilterPipeline_8hpp_source}\index{include/filt\_op/FilterPipeline.hpp@{include/filt\_op/FilterPipeline.hpp}}
+\mbox{\hyperlink{FilterPipeline_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Image_8hpp}{types/Image.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IFilter_8hpp}{filt\_op/IFilter.hpp}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFilterPipeline}{FilterPipeline}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ std::vector<std::unique\_ptr<IFilter>>\ filters;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classFilterPipeline_a89ac731dd73fe454794c8f8215452de3}{FilterPipeline}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classFilterPipeline_a28735f70ecb3e54b52cc0c2b213469d8}{\string~FilterPipeline}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFilterPipeline_a32c1937b8688cfbff2906fdfb3d2a61c}{apply}}(\mbox{\hyperlink{classImage}{Image}}\&\ img);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFilterPipeline_aec2ec7907fb893d14675dc85f39786ac}{add}}(std::unique\_ptr<IFilter>\ filter);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFilterPipeline_a1149615f0b2239f4f6ec8dcb6f706653}{clear}}();}
+\DoxyCodeLine{00019\ \};}
+
+\end{DoxyCode}
