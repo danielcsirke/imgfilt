@@ -13,7 +13,6 @@
 #include "filt_op/FilterFactory.hpp"
 #include "io/BMPImageHandler.hpp"
 
-
 /*
     process():
     Opens the text command file 
