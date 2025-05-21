@@ -1,9 +1,0 @@
-<map id="Pixel::getR" name="Pixel::getR">
-<area shape="rect" id="Node000001" title=" " alt="" coords="236,70,327,95"/>
-<area shape="rect" id="Node000002" href="$d6/d96/classContrastBrightnessFilter.html#a7a7b7853de9bead54be40d88148d14d8" title=" " alt="" coords="7,5,186,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,68,161,48,162,43,227,63"/>
-<area shape="rect" id="Node000003" href="$d3/dcf/classRGBOffsetFilter.html#a16bd26af94e728b3d0b27def0bedc061" title=" " alt="" coords="13,70,180,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,85,180,85,180,80,222,80"/>
-<area shape="rect" id="Node000004" href="$dc/d2a/classBMPImageHandler.html#a9bd8edfe64dd9ac58db32c32c2521fb1" title=" " alt="" coords="5,119,188,145"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,101,146,122,144,117,222,96"/>
-</map>
